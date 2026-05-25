@@ -82,3 +82,23 @@ h3 { margin: 0 0 8px; color: var(--navy); }
   .hero-actions, .contact-actions { flex-direction: column; align-items: stretch; }
   .btn { width: 100%; }
 }
+
+.visitor-counter {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+.visitor-counter span {
+    display: block;
+    margin-bottom: 6px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.visitor-counter img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
