@@ -2,6 +2,9 @@
 
 This repository hosts the academic research website of **Dr. Sunilgar L. Gusai**, Assistant Professor and mathematics researcher working across spectral graph theory, network science and reproducible computational modelling.
 
+**Live portfolio:** https://sunilgargusai.github.io/sunilgar-portfolio/  
+**GitHub academic profile:** https://github.com/SunilgarGusai
+
 ## Research identity
 
 The portfolio is organised around two connected research tracks:
@@ -13,6 +16,7 @@ The portfolio is organised around two connected research tracks:
 
 - [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
 - [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
+- [GitHub Profile Research Hub](https://github.com/SunilgarGusai/SunilgarGusai)
 
 ## Academic profiles
 
@@ -37,6 +41,8 @@ The portfolio is organised around two connected research tracks:
 ## Design principles
 
 The website is intentionally structured as an **academic research hub rather than a generic developer portfolio**. It prioritises publications, open research, reproducibility, funded work, teaching, academic leadership and current research directions.
+
+The portfolio uses a research-at-a-glance layer to surface verified signals such as open reproducibility repositories, benchmark coverage and funded research, while keeping unpublished work at the level of public research direction rather than exposing private submission strategy.
 
 ## Maintenance
 
