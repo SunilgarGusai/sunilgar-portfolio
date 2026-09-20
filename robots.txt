@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sunilgargusai.github.io/sunilgar-portfolio/sitemap.xml
