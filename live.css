@@ -1,0 +1,73 @@
+/* Live interaction layer — deliberately subtle, academic and motion-safe. */
+:root{--live-blue:59,130,246;--live-violet:139,92,246;--live-cyan:34,211,238}
+
+.live-scroll-progress{position:fixed;z-index:1600;inset:0 auto auto 0;height:2px;width:var(--scroll-progress,0%);background:linear-gradient(90deg,var(--blue),var(--cyan),var(--violet));box-shadow:0 0 18px rgba(var(--live-blue),.5);pointer-events:none;transition:width .08s linear}
+
+.hero{overflow:hidden;isolation:isolate}
+.research-network{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;opacity:.56;mask-image:linear-gradient(to right,transparent 0%,#000 28%,#000 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 28%,#000 100%)}
+html[data-theme="dark"] .research-network{opacity:.72}
+
+.live-focus{display:flex;align-items:center;gap:10px;min-height:29px;margin:-6px 0 18px;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.02em}
+.live-focus-label{display:inline-flex;align-items:center;gap:7px;padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:var(--surface);backdrop-filter:blur(12px);font-size:9px;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);white-space:nowrap}
+.live-focus-label::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(16,185,129,.35);animation:livePulse 2.4s ease-out infinite}
+.live-focus-value{position:relative;color:var(--text);font-weight:800}
+.live-focus-value::after{content:"";display:inline-block;width:1px;height:1.05em;margin-left:4px;vertical-align:-.12em;background:currentColor;opacity:.65;animation:caretBlink 1s steps(1,end) infinite}
+
+.ambient-one{animation:ambientOne 18s ease-in-out infinite alternate}
+.ambient-two{animation:ambientTwo 21s ease-in-out infinite alternate}
+.status-dot{animation:statusPulse 2.8s ease-out infinite}
+.floating-chip{will-change:transform}
+.chip-one{animation:chipFloatA 6.8s ease-in-out infinite}
+.chip-two{animation:chipFloatB 7.7s ease-in-out infinite}
+.chip-three{animation:chipFloatC 8.4s ease-in-out infinite}
+
+.portrait-frame{transition:transform .18s ease-out,box-shadow .25s ease}
+.hero-visual.is-tracking .portrait-frame{box-shadow:0 46px 115px rgba(19,36,65,.26)}
+
+.signal strong[data-live-counter]{font-variant-numeric:tabular-nums;min-width:4ch}
+.signal{position:relative;overflow:hidden}
+.signal::after{content:"";position:absolute;left:16%;right:16%;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(var(--live-blue),.45),transparent);transform:scaleX(0);transform-origin:center;transition:transform .5s ease}
+.signal:hover::after{transform:scaleX(1)}
+
+.project-card{--mx:50%;--my:50%;transform-style:preserve-3d}
+.project-card .project-link{position:relative;z-index:3}
+.project-card::after{transition:opacity .25s ease,transform .4s ease}
+.project-card:hover::after{opacity:.13;transform:scale(1.12)}
+.project-card .live-card-glow{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0;background:radial-gradient(330px circle at var(--mx) var(--my),color-mix(in srgb,var(--accent) 20%,transparent),transparent 66%);transition:opacity .25s ease}
+.project-card:hover .live-card-glow{opacity:1}
+.project-card>*:not(.live-card-glow){position:relative;z-index:1}
+
+.pillar{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.pillar:hover{transform:translateY(-5px);border-color:color-mix(in srgb,currentColor 28%,var(--line));box-shadow:0 22px 54px rgba(19,35,58,.11)}
+.pillar-icon{transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.pillar:hover .pillar-icon{transform:rotate(-5deg) scale(1.08)}
+.topic-cloud span{transition:transform .2s ease,border-color .2s ease,color .2s ease}
+.topic-cloud span:hover{transform:translateY(-2px);border-color:rgba(var(--live-blue),.32);color:var(--text)}
+
+.btn.primary{position:relative;overflow:hidden}
+.btn.primary::before{content:"";position:absolute;inset:-2px auto -2px -45%;width:34%;transform:skewX(-22deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);animation:buttonSweep 5.5s ease-in-out infinite}
+
+.reveal.visible .section-label{animation:labelGlow .8s ease both}
+
+@keyframes livePulse{0%{box-shadow:0 0 0 0 rgba(16,185,129,.36)}70%,100%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+@keyframes caretBlink{0%,48%{opacity:.7}49%,100%{opacity:0}}
+@keyframes statusPulse{0%{box-shadow:0 0 0 4px rgba(16,185,129,.12),0 0 0 rgba(16,185,129,.28)}65%,100%{box-shadow:0 0 0 4px rgba(16,185,129,.08),0 0 0 14px rgba(16,185,129,0)}}
+@keyframes ambientOne{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(-80px,65px,0) scale(1.18)}}
+@keyframes ambientTwo{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(90px,-55px,0) scale(1.12)}}
+@keyframes chipFloatA{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(5px,-10px,0)}}
+@keyframes chipFloatB{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(-7px,8px,0)}}
+@keyframes chipFloatC{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(8px,-7px,0)}}
+@keyframes buttonSweep{0%,72%{left:-45%}100%{left:125%}}
+@keyframes labelGlow{0%{opacity:.25;filter:blur(2px);transform:translateY(3px)}100%{opacity:1;filter:blur(0);transform:translateY(0)}}
+
+@media (max-width:760px){
+  .research-network{opacity:.34;mask-image:none;-webkit-mask-image:none}
+  .live-focus{align-items:flex-start;flex-direction:column;gap:7px;margin-top:-4px}
+  .live-focus-value{min-height:1.4em}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .ambient-one,.ambient-two,.status-dot,.floating-chip,.btn.primary::before,.live-focus-label::before,.live-focus-value::after{animation:none!important}
+  .portrait-frame,.pillar,.pillar-icon,.topic-cloud span{transition:none!important}
+  .research-network{opacity:.26}
+}
