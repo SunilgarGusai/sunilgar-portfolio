@@ -1,22 +1,62 @@
 # Dr. Sunilgar L. Gusai — Academic Research Portfolio
 
-This repository hosts the academic research website of **Dr. Sunilgar L. Gusai**, Assistant Professor and mathematics researcher working across spectral graph theory, network science and reproducible computational modelling.
+This repository hosts the public academic research website of **Dr. Sunilgar L. Gusai**, Assistant Professor and mathematics researcher working from **spectral graph theory** through **network science** and **molecular graph modelling** to **reliable scientific AI**.
 
 **Live portfolio:** https://sunilgargusai.github.io/sunilgar-portfolio/  
-**GitHub academic profile:** https://github.com/SunilgarGusai
+**GitHub research hub:** https://github.com/SunilgarGusai
 
 ## Research identity
 
-The portfolio is organised around two connected research tracks:
+The portfolio is organised around four connected pillars:
 
-1. **Mathematical Graph Theory & Spectral Methods** — spectral graph theory, graph energy, Vertex Eccentricity Labeled Energy (VELE), graph matrices, extremal questions, inverse spectral problems and mathematical graph descriptors.
-2. **Computational Network Science & Reliable Data-Driven Modelling** — network resilience, graph-based screening, scientific machine learning, uncertainty quantification, distribution shift, reproducibility and interpretable computational workflows.
+1. **Spectral & Structural Graph Theory** — graph matrices, graph energy, VELE, spectral bounds, extremal questions and inverse reconstruction.
+2. **Network Science & Resilience** — failure-sensitive screening, structural–physical validation and interpretable network vulnerability.
+3. **Molecular Graphs & QSAR** — classical graph descriptors, representation degeneracy, EGFR modelling and chemical-space shift.
+4. **Reliable Scientific AI** — conformal prediction, calibration, uncertainty, scientific-rule gating and reproducible machine learning.
 
 ## Featured open research
 
 - [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
+- [EGFR Graph QSAR — Representation Limits](https://github.com/SunilgarGusai/EGFR-Graph-QSAR-Reproducibility)
+- [Applicability-Gated Molecular AI](https://github.com/SunilgarGusai/applicability-gated-molecular-ai)
 - [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
-- [GitHub Profile Research Hub](https://github.com/SunilgarGusai/SunilgarGusai)
+
+## Design system
+
+The 2026 refresh turns the site into a compact academic research hub rather than a generic résumé page. The interface uses:
+
+- a graph/network-inspired hero composition;
+- four research-pillar cards;
+- project cards tied directly to public reproducibility repositories;
+- light/dark theme support;
+- responsive navigation and mobile layouts;
+- subtle intersection-based reveal animation with reduced-motion support;
+- semantic HTML, structured metadata and accessible navigation;
+- no JavaScript framework or build dependency.
+
+## Website structure
+
+```text
+.
+├── index.html      # Research portfolio and academic profile
+├── style.css       # Responsive visual design system + dark mode
+├── script.js       # Navigation, theme, active sections and reveal behaviour
+├── assets/         # Profile image and CV
+├── robots.txt      # Search-engine crawling guidance
+└── sitemap.xml     # Search-engine discovery
+```
+
+## Open-research principles
+
+The website intentionally emphasizes **verified public evidence** rather than private manuscript strategy. Repository summaries are written to preserve the scientific scope and limitations stated in the underlying research artefacts.
+
+The public programme prioritises:
+
+- executable or auditable reproducibility paths;
+- provenance and machine-readable outputs;
+- independent checks and sensitivity analysis;
+- explicit limitations and negative findings;
+- stable scholarly identity through ORCID, Scopus, DOI and repository metadata.
 
 ## Academic profiles
 
@@ -26,34 +66,17 @@ The portfolio is organised around two connected research tracks:
 - [Marwadi University research profile](https://marwadiuniversity.irins.org/profile/521348)
 - [LinkedIn](https://linkedin.com/in/dr-sunilgar-gusai)
 
-## Website structure
-
-```text
-.
-├── index.html      # Research portfolio and academic profile
-├── style.css       # Responsive visual design system
-├── script.js       # Mobile navigation behaviour
-├── assets/         # Profile image and CV
-├── robots.txt      # Search-engine crawling guidance
-└── sitemap.xml     # Search-engine discovery
-```
-
-## Design principles
-
-The website is intentionally structured as an **academic research hub rather than a generic developer portfolio**. It prioritises publications, open research, reproducibility, funded work, teaching, academic leadership and current research directions.
-
-The portfolio uses a research-at-a-glance layer to surface verified signals such as open reproducibility repositories, benchmark coverage and funded research, while keeping unpublished work at the level of public research direction rather than exposing private submission strategy.
-
 ## Maintenance
 
 When updating the portfolio:
 
 - add only verified publication records to the published-research section;
-- present unpublished work as broad research directions unless public disclosure is intentional;
-- link research outputs to code/data/reproducibility repositories where available;
+- present unpublished work at the level already made public by its repository;
+- keep quantitative claims traceable to repository evidence;
+- link open research to code/data/reproducibility artefacts where available;
 - keep ORCID, Scopus, institutional and CV information current;
-- prefer durable scholarly links such as DOI and archived research repositories.
+- retain explicit scientific limitations instead of turning project summaries into promotional claims.
 
 ## License and reuse
 
-The website content represents the academic profile of Dr. Sunilgar L. Gusai. Repository-specific code and research artefacts linked from this site retain the licences stated in their respective repositories.
+The website content represents the academic profile of Dr. Sunilgar L. Gusai. Repository-specific code, data and research artefacts linked from the site retain the licences and usage terms stated in their respective repositories.
