@@ -17,7 +17,7 @@ The public research programme is organised around four connected directions:
 3. **Molecular & Biomolecular Graphs** — QSAR, representation degeneracy, residue-contact networks, mutation geometry and protein stability.
 4. **Reliable Scientific AI & Evidence** — distribution shift, calibration, conformal prediction, scientific-rule gating, evidence consistency and reproducible decision analysis.
 
-## Eight public research programmes
+## Selected public research
 
 ### Current frontier
 - [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
@@ -41,7 +41,6 @@ The public research programme is organised around four connected directions:
 ## Academic leadership
 
 - **Program Head, Data Science Programs**, Marwadi University.
-- **Area Chair — Advanced Computing**, Department of AI/ML/DS.
 - **Assistant Professor of Mathematics**, Faculty of Computer Applications.
 - Academic coordination, timetable operations, curriculum contribution, examinations, mentoring, industrial exposure and institutional quality work.
 
