@@ -30,7 +30,8 @@
         "github_profile": true
       },
       "portfolio_card_title": "Program Head · Data Science",
-      "portfolio_card_copy": "Academic planning, curriculum coordination, faculty coordination, student mentoring and programme-quality support for Data Science programmes."
+      "portfolio_card_copy": "Academic planning, curriculum coordination, faculty coordination, student mentoring and programme-quality support for Data Science programmes.",
+      "cv_heading": "Program Head, Data Science Programs, Marwadi University, Rajkot"
     },
     {
       "id": "assistant-professor",
@@ -45,7 +46,8 @@
         "github_profile": true
       },
       "portfolio_card_title": "Assistant Professor · Mathematics",
-      "portfolio_card_copy": "Teaching, mentoring and interdisciplinary research across mathematics, computer applications, AI and data-oriented programmes."
+      "portfolio_card_copy": "Teaching, mentoring and interdisciplinary research across mathematics, computer applications, AI and data-oriented programmes.",
+      "cv_heading": "Assistant Professor of Mathematics, Faculty of Computer Applications, Marwadi University, Rajkot"
     },
     {
       "id": "timetable-coordinator",
@@ -57,7 +59,8 @@
         "cv": true,
         "portfolio": false,
         "github_profile": false
-      }
+      },
+      "cv_heading": "Coordinator, Time Table Committee, Marwadi University, Rajkot"
     },
     {
       "id": "area-chair-advanced-computing",
@@ -84,7 +87,8 @@
         "cv": true,
         "portfolio": false,
         "github_profile": false
-      }
+      },
+      "cv_heading": "Assistant Professor (Contractual), Department of Mathematics, Saurashtra University, Rajkot"
     }
   ],
   "cv_service_entries": [
