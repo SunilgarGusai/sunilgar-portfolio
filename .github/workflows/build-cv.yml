@@ -7,6 +7,12 @@ on:
       - "cv/**"
       - "assets/profile.jpg"
       - ".github/workflows/build-cv.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "cv/**"
+      - "assets/profile.jpg"
+      - ".github/workflows/build-cv.yml"
   workflow_dispatch:
 
 permissions:
@@ -20,14 +26,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile LaTeX CV
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         with:
           root_file: CV_DR.SLG.tex
           working_directory: cv
-          latexmk_use_xelatex: false
           args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
 
       - name: Publish PDF to portfolio assets
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash
         run: |
           cp cv/CV_DR.SLG.pdf assets/CV_DR_Sunilgar_L_Gusai.pdf
