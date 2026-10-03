@@ -12,7 +12,10 @@
     "portfolio_url": "https://sunilgargusai.github.io/sunilgar-portfolio/",
     "github_url": "https://github.com/SunilgarGusai",
     "orcid": "0009-0004-0739-4812",
-    "scopus_author_id": "60059223900"
+    "scopus_author_id": "60059223900",
+    "profile_suffix": "Ph.D. · Graph Theorist · Computational Researcher",
+    "portfolio_eyebrow_suffix": "Ph.D. Mathematics · Open Research",
+    "profile_teaching_tail": "alongside teaching, curriculum work, timetable coordination, examinations, student mentoring, research collaboration and institutional service."
   },
   "roles": [
     {
@@ -103,7 +106,7 @@
       "year": 2026,
       "authors": "Sunilgar Gusai",
       "venue": "International Journal of Scientific Development and Research",
-      "citation_detail": "Vol. 11(9), pp. b394–b402, September 2026",
+      "citation_detail": "11(9), b394–b402, September 2026",
       "doi": "10.56975/ijsdr.v11i9.311920",
       "tags": [
         "Wiener Index",
@@ -111,6 +114,12 @@
         "Edge Failure"
       ],
       "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "cv_citation_detail": "Vol.~11(9), pp.~b394--b402, September 2026",
+      "show_doi": {
         "cv": true,
         "portfolio": true,
         "github_profile": true
@@ -133,6 +142,11 @@
         "cv": true,
         "portfolio": true,
         "github_profile": true
+      },
+      "show_doi": {
+        "cv": false,
+        "portfolio": false,
+        "github_profile": false
       }
     },
     {
@@ -142,7 +156,7 @@
       "year": 2026,
       "authors": "Sunilgar L. Gusai",
       "venue": "International Journal of Science and Research",
-      "citation_detail": "Vol. 15(1), pp. 681–686, January 2026",
+      "citation_detail": "Vol. 15, pp. 681–686, 2026",
       "doi": "10.21275/SR26109233300",
       "tags": [
         "Spectral Bounds",
@@ -152,6 +166,12 @@
         "cv": true,
         "portfolio": true,
         "github_profile": true
+      },
+      "cv_citation_detail": "Vol.~15(1), pp.~681--686, January 2026",
+      "show_doi": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
       }
     },
     {
@@ -161,7 +181,7 @@
       "year": 2025,
       "authors": "Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja",
       "venue": "International Journal of Basic and Applied Sciences",
-      "citation_detail": "Vol. 14(4), pp. 339–350, 2025",
+      "citation_detail": "14(4), 339–350, 2025",
       "doi": "10.14419/qtfv0860",
       "tags": [
         "VELE",
@@ -169,6 +189,12 @@
         "Graph Energy"
       ],
       "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "cv_citation_detail": "Vol.~14(4), pp.~339--350, 2025",
+      "show_doi": {
         "cv": true,
         "portfolio": true,
         "github_profile": true
