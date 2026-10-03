@@ -1,54 +1,61 @@
 # Dr. Sunilgar L. Gusai — Academic Research Portfolio
 
-This repository hosts the public academic research website of **Dr. Sunilgar L. Gusai**, Assistant Professor and mathematics researcher working from **spectral graph theory** through **network science** and **molecular graph modelling** to **reliable scientific AI**.
+This repository hosts the public academic research website of **Dr. Sunilgar L. Gusai**, **Assistant Professor of Mathematics** and **Program Head, Data Science Programs** at Marwadi University, Rajkot.
+
+The portfolio presents one connected research programme spanning **graph theory and formal methods**, **networked systems and resilience**, **molecular and biomolecular graphs**, and **reliable scientific AI and evidence**.
 
 **Live portfolio:** https://sunilgargusai.github.io/sunilgar-portfolio/  
-**GitHub research hub:** https://github.com/SunilgarGusai
+**GitHub research hub:** https://github.com/SunilgarGusai  
+**Latest CV:** https://sunilgargusai.github.io/sunilgar-portfolio/assets/CV_DR_Sunilgar_L_Gusai.pdf
 
-## Research identity
+## Research architecture
 
-The portfolio is organised around four connected pillars:
+The public research programme is organised around four connected directions:
 
-1. **Spectral & Structural Graph Theory** — graph matrices, graph energy, VELE, spectral bounds, extremal questions and inverse reconstruction.
-2. **Network Science & Resilience** — failure-sensitive screening, structural–physical validation and interpretable network vulnerability.
-3. **Molecular Graphs & QSAR** — classical graph descriptors, representation degeneracy, EGFR modelling and chemical-space shift.
-4. **Reliable Scientific AI** — conformal prediction, calibration, uncertainty, scientific-rule gating and reproducible machine learning.
+1. **Graph Theory & Formal Methods** — spectral structure, graph energy, VELE, extremal problems, graph algorithms, complexity and certificates.
+2. **Networked Systems & Resilience** — power-grid screening, road-network resilience, failure-sensitive analysis, flood hazards and budgeted intervention.
+3. **Molecular & Biomolecular Graphs** — QSAR, representation degeneracy, residue-contact networks, mutation geometry and protein stability.
+4. **Reliable Scientific AI & Evidence** — distribution shift, calibration, conformal prediction, scientific-rule gating, evidence consistency and reproducible decision analysis.
 
-## Featured open research
+## Eight public research programmes
 
+### Current frontier
+- [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
+- [Assam Road Inspection Benchmark](https://github.com/SunilgarGusai/Assam-Road-Inspection-Benchmark)
+- [Claim–Evidence Consistency in Labeled Graphs](https://github.com/SunilgarGusai/Claim-Evidence-Consistency-Reproducibility)
+- [Global MSW Reliability Under Geographic Shift](https://github.com/SunilgarGusai/global-msw-reliability-under-shift)
+
+### Established open research
 - [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
 - [EGFR Graph QSAR — Representation Limits](https://github.com/SunilgarGusai/EGFR-Graph-QSAR-Reproducibility)
 - [Applicability-Gated Molecular AI](https://github.com/SunilgarGusai/applicability-gated-molecular-ai)
 - [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
 
-## Design system
+## Recent scholarly milestones
 
-The 2026 refresh turns the site into a compact academic research hub rather than a generic résumé page. The interface uses:
+- **Edge Failure Sensitivity of Wiener and Harary Indices in Classical Network Graphs** — *International Journal of Scientific Development and Research*, 11(9), b394–b402, 2026. DOI: https://doi.org/10.56975/ijsdr.v11i9.311920
+- **Explainable Machine Learning for Real-Time Cyber Threat Detection: An Intelligent Framework for Adaptive Information Security** — accepted for publication in *Computer and Decision Making (COMDEM)*, Manuscript ID CDM_121, 30 September 2026.
+- **Eccentricity-Based Bounds for the Spectral Radius of Graph Matrices** — *International Journal of Science and Research*, 15, 681–686, 2026.
+- **On Vertex Eccentricity Labeled Energy of a Graph** — *International Journal of Basic and Applied Sciences*, 14(4), 339–350, 2025. DOI: https://doi.org/10.14419/qtfv0860
 
-- a graph/network-inspired hero composition;
-- four research-pillar cards;
-- project cards tied directly to public reproducibility repositories;
-- light/dark theme support;
-- responsive navigation and mobile layouts;
-- subtle intersection-based reveal animation with reduced-motion support;
-- semantic HTML, structured metadata and accessible navigation;
-- no JavaScript framework or build dependency.
+## Academic leadership
 
-## Website structure
+- **Program Head, Data Science Programs**, Marwadi University.
+- **Area Chair — Advanced Computing**, Department of AI/ML/DS.
+- **Assistant Professor of Mathematics**, Faculty of Computer Applications.
+- Academic coordination, timetable operations, curriculum contribution, examinations, mentoring, industrial exposure and institutional quality work.
 
-```text
-.
-├── index.html      # Research portfolio and academic profile
-├── style.css       # Responsive visual design system + dark mode
-├── script.js       # Navigation, theme, active sections and reveal behaviour
-├── assets/         # Profile image and CV
-├── robots.txt      # Search-engine crawling guidance
-└── sitemap.xml     # Search-engine discovery
-```
+## CV maintenance
 
-## Open-research principles
+The canonical CV source is maintained under `cv/` as modular LaTeX. GitHub Actions validates the CV on pull requests and rebuilds the public PDF on `main` whenever the CV source changes.
 
-The website intentionally emphasizes **verified public evidence** rather than private manuscript strategy. Repository summaries are written to preserve the scientific scope and limitations stated in the underlying research artefacts.
+Public CV path:
+
+`assets/CV_DR_Sunilgar_L_Gusai.pdf`
+
+## Design and research standard
+
+The site is designed as a compact academic research hub rather than a generic résumé page. It uses an animated network-inspired interface, responsive project filtering, dark/light themes, and direct links to public reproducibility artefacts.
 
 The public programme prioritises:
 
@@ -64,18 +71,8 @@ The public programme prioritises:
 - [ORCID](https://orcid.org/0009-0004-0739-4812)
 - [Scopus](https://www.scopus.com/authid/detail.uri?authorId=60059223900)
 - [Marwadi University research profile](https://marwadiuniversity.irins.org/profile/521348)
-- [LinkedIn](https://linkedin.com/in/dr-sunilgar-gusai)
-
-## Maintenance
-
-When updating the portfolio:
-
-- add only verified publication records to the published-research section;
-- present unpublished work at the level already made public by its repository;
-- keep quantitative claims traceable to repository evidence;
-- link open research to code/data/reproducibility artefacts where available;
-- keep ORCID, Scopus, institutional and CV information current;
-- retain explicit scientific limitations instead of turning project summaries into promotional claims.
+- [LinkedIn](https://www.linkedin.com/in/dr-sunilgar-l-gusai-431a581a8/)
+- [Academic Portfolio](https://sunilgargusai.github.io/sunilgar-portfolio/)
 
 ## License and reuse
 
