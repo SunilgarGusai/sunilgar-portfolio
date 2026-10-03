@@ -1,0 +1,47 @@
+\documentclass[a4paper,skipsamekey,11pt,english]{curve}
+
+\usepackage{settings}
+
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage[medium,bold]{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[p,osf,swashQ]{cochineal}
+  \usepackage{cabin}
+  \usepackage[varqu,varl,scale=0.9]{zi4}
+\fi
+\usepackage{fontawesome5}
+\usepackage{qrcode}
+
+\title{Curriculum Vitae}
+
+\begin{document}
+
+\input{contact}
+
+\makerubric{personal}
+\makerubric{educational_qualification}
+\makerubric{experience}
+\makerubric{responsibilities}
+\makerubric{publications}
+\makerubric{open_research}
+\makerubric{research_project}
+\makerubric{paper_presentation}
+
+\newpage
+\input{participations}
+
+\makerubric{skills}
+\makerubric{professional_body}
+\makerubric{achievements}
+\makerubric{referee}
+
+\input{research_statement}
+
+\clearpage
+\input{teaching_statement}
+
+\end{document}
