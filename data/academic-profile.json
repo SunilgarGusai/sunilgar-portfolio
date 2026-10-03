@@ -379,7 +379,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Mutation Geodesic Shielding",
+      "icon": "🧬",
+      "status_label": "Public · Manuscript submission"
     },
     {
       "id": "assam",
@@ -394,7 +397,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Assam Road Inspection",
+      "icon": "🌧️",
+      "status_label": "Public · Frozen benchmark"
     },
     {
       "id": "claim-evidence",
@@ -409,7 +415,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Claim–Evidence Consistency",
+      "icon": "◈",
+      "status_label": "Public · Submission release"
     },
     {
       "id": "msw",
@@ -424,7 +433,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Global MSW Reliability",
+      "icon": "🌍",
+      "status_label": "Public · Submission release"
     },
     {
       "id": "vele-grid",
@@ -439,7 +451,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "VELE Power-Grid",
+      "icon": "⚡",
+      "status_label": "Public · Submission release"
     },
     {
       "id": "egfr",
@@ -454,7 +469,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "EGFR Graph QSAR",
+      "icon": "⬡",
+      "status_label": "Public · Reproducibility"
     },
     {
       "id": "agrr",
@@ -469,7 +487,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Applicability-Gated Molecular AI",
+      "icon": "◎",
+      "status_label": "Public · Frozen outputs"
     },
     {
       "id": "conformal",
@@ -484,7 +505,10 @@
       "showcase": {
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "short_title": "Conformal Prediction",
+      "icon": "∿",
+      "status_label": "Public · Reproducibility"
     }
   ],
   "sync_policy": {
