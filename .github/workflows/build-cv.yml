@@ -18,6 +18,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: academic-cv-main
+  cancel-in-progress: true
+
 jobs:
   build-cv:
     runs-on: ubuntu-latest
