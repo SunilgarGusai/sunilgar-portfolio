@@ -154,10 +154,15 @@ def render_portfolio_publications(data: dict) -> str:
                 f'<div class="pub-tags">{tags}</div></div></article>'
             )
         else:
-            authors = html.escape(item.get("authors", ""))
+            authors_raw = item.get("authors", "")
+            if "," in authors_raw:
+                first, rest = authors_raw.split(",", 1)
+                authors_html = f"<strong>{html.escape(first)}</strong>," + html.escape(rest)
+            else:
+                authors_html = f"<strong>{html.escape(authors_raw)}</strong>"
             venue = html.escape(item["venue"])
             detail = html.escape(item.get("citation_detail", ""))
-            p = f"<p><strong>{authors}</strong>. <em>{venue}</em>, {detail}.</p>"
+            p = f"<p>{authors_html}. <em>{venue}</em>, {detail}.</p>"
             doi = ""
             if item.get("doi") and item.get("show_doi", {}).get("portfolio", True):
                 doi_url = "https://doi.org/" + item["doi"]
