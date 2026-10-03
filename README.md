@@ -19,17 +19,14 @@ The public research programme is organised around four connected directions:
 
 ## Selected public research
 
-### Current frontier
-- [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
-- [Assam Road Inspection Benchmark](https://github.com/SunilgarGusai/Assam-Road-Inspection-Benchmark)
-- [Claim–Evidence Consistency in Labeled Graphs](https://github.com/SunilgarGusai/Claim-Evidence-Consistency-Reproducibility)
-- [Global MSW Reliability Under Geographic Shift](https://github.com/SunilgarGusai/global-msw-reliability-under-shift)
+Representative public reproducibility projects:
 
-### Established open research
 - [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
 - [EGFR Graph QSAR — Representation Limits](https://github.com/SunilgarGusai/EGFR-Graph-QSAR-Reproducibility)
+- [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
 - [Applicability-Gated Molecular AI](https://github.com/SunilgarGusai/applicability-gated-molecular-ai)
-- [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
+
+The portfolio website provides the broader research catalogue without treating repository count as an academic metric.
 
 ## Recent scholarly milestones
 
