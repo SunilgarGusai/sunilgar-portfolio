@@ -39,6 +39,7 @@ jobs:
           cp cv/CV_DR.SLG.pdf assets/CV_DR_Sunilgar_L_Gusai.pdf
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add assets/CV_DR_Sunilgar_L_Gusai.pdf
           if git diff --cached --quiet; then
             echo "CV PDF already current."
