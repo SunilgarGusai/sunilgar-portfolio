@@ -1,53 +1,53 @@
 # Dr. Sunilgar L. Gusai
 
-**Assistant Professor · Ph.D. in Mathematics**  
-**Spectral Graph Theory · Network Science · Reproducible Computational Research**
+**Assistant Professor of Mathematics · Program Head, Data Science Programs · Ph.D.**  
+**Graph Theory · Networked Systems · Molecular & Biomolecular Graphs · Reliable Scientific AI**
 
-I am a mathematics researcher working across **spectral graph theory**, **graph energy**, **network science**, and **reproducible computational modelling**. My current research programme connects rigorous graph-theoretic methods with network resilience, graph-based learning, reliable scientific machine learning, uncertainty-aware prediction and QSPR.
+I am a mathematics and computational researcher at **Marwadi University, Rajkot**, working from rigorous graph-theoretic structure to reproducible scientific evidence in networks, molecular systems, biomolecular graphs and data-driven decision problems.
 
-[Academic Portfolio](https://sunilgargusai.github.io/sunilgar-portfolio/) · [ORCID](https://orcid.org/0009-0004-0739-4812) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=60059223900) · [Institutional Profile](https://marwadiuniversity.irins.org/profile/521348) · [LinkedIn](https://linkedin.com/in/dr-sunilgar-gusai)
+[Academic Portfolio](https://sunilgargusai.github.io/sunilgar-portfolio/) · [Latest CV](https://sunilgargusai.github.io/sunilgar-portfolio/assets/CV_DR_Sunilgar_L_Gusai.pdf) · [ORCID](https://orcid.org/0009-0004-0739-4812) · [Scopus](https://www.scopus.com/authid/detail.uri?authorId=60059223900) · [Institutional Profile](https://marwadiuniversity.irins.org/profile/521348) · [LinkedIn](https://www.linkedin.com/in/dr-sunilgar-l-gusai-431a581a8/)
 
 ---
 
 ## Research programme
 
-### Mathematical Graph Theory & Spectral Methods
+### λ Graph Theory & Formal Methods
+Spectral graph theory · graph energy · VELE · eccentricity-sensitive invariants · extremal problems · graph algorithms · complexity · verification certificates
 
-- Spectral graph theory and graph matrices
-- Graph energy and eccentricity-based invariants
-- Vertex Eccentricity Labeled Energy (VELE)
-- Spectral bounds and extremal graph problems
-- Inverse spectral and structured reconstruction problems
-- Graph-theoretic descriptors and QSPR
+### ⌘ Networked Systems & Resilience
+Power grids · flood-exposed road networks · failure-sensitive screening · structural–physical validation · transfer evaluation · intervention planning
 
-### Computational Network Science & Reliable Data-Driven Modelling
+### ⬡ Molecular & Biomolecular Graphs
+QSPR / QSAR · representation degeneracy · chemical-space shift · residue-contact networks · mutation geometry · protein stability
 
-- Network resilience and vulnerability screening
-- Explainable graph-based component ranking
-- Reproducible scientific computing
-- Distribution shift and grouped validation
-- Conformal prediction and uncertainty quantification
-- Graph-based machine learning and scientific ML
+### ◎ Reliable Scientific AI & Evidence
+Conformal prediction · calibration · uncertainty · scientific-rule gating · geographic shift · evidence consistency · reproducibility
 
 ---
 
-## Featured open research
+## Open research ecosystem
 
-### [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
+**Eight public research programmes** are maintained on GitHub:
 
-Public reproducibility materials for a hybrid structural–electrical study of IEEE/MATPOWER benchmark power networks. The repository includes executable MATPOWER/Octave cross-validation, independent Python/DC-flow validation, integrity workflows, provenance documentation and claim traceability.
-
-**Keywords:** `spectral graph theory` · `VELE` · `network resilience` · `power grids` · `reproducibility`
-
-### [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
-
-Reproducibility materials for uncertainty-aware concrete-strength modelling under physically interpretable composition shifts, with grouped validation, conformal prediction, support diagnostics, sensitivity analysis and machine-readable verification outputs.
-
-**Keywords:** `conformal prediction` · `distribution shift` · `scientific ML` · `uncertainty` · `reproducibility`
+- Mutation Geodesic Shielding for Protein Stability
+- Assam Road Inspection Benchmark
+- Claim–Evidence Consistency in Labeled Graphs
+- Global MSW Reliability Under Geographic Shift
+- VELE Power-Grid Vulnerability Screening
+- EGFR Graph QSAR — Representation Limits
+- Applicability-Gated Molecular AI
+- Calibration Transfer of Conformal Prediction
 
 ---
 
-## Selected publication
+## Recent scholarly milestones
+
+**Edge Failure Sensitivity of Wiener and Harary Indices in Classical Network Graphs**  
+*International Journal of Scientific Development and Research*, 11(9), b394–b402, 2026  
+[DOI: 10.56975/ijsdr.v11i9.311920](https://doi.org/10.56975/ijsdr.v11i9.311920)
+
+**Explainable Machine Learning for Real-Time Cyber Threat Detection: An Intelligent Framework for Adaptive Information Security**  
+Accepted for publication in *Computer and Decision Making (COMDEM)*, Manuscript ID CDM_121, 30 September 2026.
 
 **On Vertex Eccentricity Labeled Energy of a Graph**  
 Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja  
@@ -56,15 +56,11 @@ Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja
 
 ---
 
-## Teaching and academic work
+## Academic leadership
 
-I teach mathematical foundations for computing and data-oriented programmes, including **Linear Algebra, Calculus, Discrete Mathematics, Operations Research, Probability, Statistics, Applied Mathematics and Optimization**. I also contribute to programme coordination, student mentoring, curriculum work and academic administration.
+**Program Head, Data Science Programs** · **Area Chair — Advanced Computing** · **Assistant Professor of Mathematics**
 
----
-
-## Current directions
-
-`Spectral graph invariants` · `Network resilience` · `Explainable graph screening` · `Inverse spectral problems` · `Reliable scientific ML` · `QSPR` · `Graph-based learning`
+I contribute to programme leadership, curriculum and timetable coordination, examinations, student mentoring, interdisciplinary research, industrial exposure and institutional academic service.
 
 ---
 
