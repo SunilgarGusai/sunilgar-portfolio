@@ -25,16 +25,18 @@ Conformal prediction · calibration · uncertainty · scientific-rule gating · 
 
 ---
 
-## Selected open research
+## Open research ecosystem
 
-Representative public reproducibility projects:
+**Eight public research programmes** are maintained on GitHub:
 
+- Mutation Geodesic Shielding for Protein Stability
+- Assam Road Inspection Benchmark
+- Claim–Evidence Consistency in Labeled Graphs
+- Global MSW Reliability Under Geographic Shift
 - VELE Power-Grid Vulnerability Screening
 - EGFR Graph QSAR — Representation Limits
-- Mutation Geodesic Shielding for Protein Stability
 - Applicability-Gated Molecular AI
-
-A broader set of public research artefacts remains accessible through the portfolio and GitHub repositories.
+- Calibration Transfer of Conformal Prediction
 
 ---
 
@@ -56,7 +58,7 @@ Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja
 
 ## Academic leadership
 
-**Program Head, Data Science Programs** · **Assistant Professor of Mathematics**
+**Program Head, Data Science Programs** · **Area Chair — Advanced Computing** · **Assistant Professor of Mathematics**
 
 I contribute to programme leadership, curriculum and timetable coordination, examinations, student mentoring, interdisciplinary research, industrial exposure and institutional academic service.
 
