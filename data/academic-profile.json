@@ -1,0 +1,490 @@
+{
+  "schema_version": 1,
+  "identity_version": "2026-10-04.1",
+  "updated_on": "2026-10-04",
+  "public_identity": {
+    "name": "Dr. Sunilgar L. Gusai",
+    "primary_title": "Assistant Professor of Mathematics",
+    "secondary_title": "Program Head, Data Science Programs",
+    "institution": "Marwadi University",
+    "location": "Rajkot, Gujarat, India",
+    "email": "dr.sunilgargusai@gmail.com",
+    "portfolio_url": "https://sunilgargusai.github.io/sunilgar-portfolio/",
+    "github_url": "https://github.com/SunilgarGusai",
+    "orcid": "0009-0004-0739-4812",
+    "scopus_author_id": "60059223900"
+  },
+  "roles": [
+    {
+      "id": "program-head-ds",
+      "title": "Program Head, Data Science Programs",
+      "institution": "Marwadi University, Rajkot",
+      "period": "Dec 2025 -- Present",
+      "description": "Academic leadership for B.Sc. Data Science and M.Sc. Data Science programmes, including academic planning, curriculum coordination, course scheduling, faculty coordination, student mentoring, documentation, quality processes, and interdisciplinary integration of mathematics, data science, and computing.",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "assistant-professor",
+      "title": "Assistant Professor of Mathematics",
+      "unit": "Faculty of Computer Applications",
+      "institution": "Marwadi University, Rajkot",
+      "period": "Aug 2022 -- Present",
+      "description": "Teaching and mentoring students across BCA, B.Sc. IT, B.Sc. Data Science, M.Sc. Data Science, M.Sc. Mathematics, and MCA. Courses include Linear Algebra, Calculus, Discrete Mathematics, Operations Research, Probability, Statistics, and Applied Mathematics, with emphasis on computational and data-oriented applications.",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "timetable-coordinator",
+      "title": "Coordinator, Time Table Committee",
+      "institution": "Marwadi University, Rajkot",
+      "period": "Aug 2023 -- Present",
+      "description": "Responsible for academic scheduling, timetable coordination, documentation, and operational support across multiple programmes and semesters.",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "area-chair-advanced-computing",
+      "title": "Area Chair — Advanced Computing",
+      "unit": "Department of AI/ML/DS",
+      "institution": "Marwadi University",
+      "period": "2026 -- Present",
+      "description": "Coordinating advanced-computing research themes across graph/game theory, optimization, parallel and green computing, quantum computing and related areas.",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "saurashtra-assistant-professor",
+      "title": "Assistant Professor (Contractual), Department of Mathematics",
+      "institution": "Saurashtra University, Rajkot",
+      "period": "Jan 2021 -- Apr 2022",
+      "description": "Delivered undergraduate and postgraduate mathematics courses, contributed to student mentoring, and supported departmental academic activities.",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    }
+  ],
+  "cv_service_entries": [
+    {
+      "period": "2023 -- Present",
+      "title": "Academic Administration, Timetable Coordination and Quality Support",
+      "description": "Contributing to curriculum planning, examination work, student mentoring, academic documentation, committee coordination, timetable operations, accreditation support, and quality-assurance processes."
+    },
+    {
+      "period": "2026",
+      "title": "Industrial and Academic Exposure Coordination",
+      "description": "Coordinated student industrial visits and academic exposure activities including BISAG, Gandhinagar; Solvex; and Rishabh Software, with emphasis on data science, AI, Python, databases, software practice, and industry-oriented learning."
+    },
+    {
+      "period": "2024 -- 2026",
+      "title": "Departmental Events and Student Engagement",
+      "description": "Contributed to conference support, student activities, academic events, mentoring, and interdisciplinary coordination between mathematics, computer applications, AI, and data-science programmes."
+    }
+  ],
+  "scholarship": [
+    {
+      "id": "wiener-harary-edge-failure",
+      "title": "Edge Failure Sensitivity of Wiener and Harary Indices in Classical Network Graphs",
+      "status": "published",
+      "year": 2026,
+      "authors": "Sunilgar Gusai",
+      "venue": "International Journal of Scientific Development and Research",
+      "citation_detail": "Vol. 11(9), pp. b394–b402, September 2026",
+      "doi": "10.56975/ijsdr.v11i9.311920",
+      "tags": [
+        "Wiener Index",
+        "Harary Index",
+        "Edge Failure"
+      ],
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "cyber-threat-xai",
+      "title": "Explainable Machine Learning for Real-Time Cyber Threat Detection: An Intelligent Framework for Adaptive Information Security",
+      "status": "accepted",
+      "year": 2026,
+      "venue": "Computer and Decision Making (COMDEM)",
+      "manuscript_id": "CDM_121",
+      "decision_date": "30 September 2026",
+      "tags": [
+        "Explainable ML",
+        "Cybersecurity",
+        "Adaptive Detection"
+      ],
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "spectral-radius-eccentricity",
+      "title": "Eccentricity-Based Bounds for the Spectral Radius of Graph Matrices",
+      "status": "published",
+      "year": 2026,
+      "authors": "Sunilgar L. Gusai",
+      "venue": "International Journal of Science and Research",
+      "citation_detail": "Vol. 15(1), pp. 681–686, January 2026",
+      "doi": "10.21275/SR26109233300",
+      "tags": [
+        "Spectral Bounds",
+        "Graph Matrices"
+      ],
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "vele-graph",
+      "title": "On Vertex Eccentricity Labeled Energy of a Graph",
+      "status": "published",
+      "year": 2025,
+      "authors": "Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja",
+      "venue": "International Journal of Basic and Applied Sciences",
+      "citation_detail": "Vol. 14(4), pp. 339–350, 2025",
+      "doi": "10.14419/qtfv0860",
+      "tags": [
+        "VELE",
+        "Spectral Graph Theory",
+        "Graph Energy"
+      ],
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "prefailure-edge-screening",
+      "title": "Explainable Graph Machine Learning for Leakage-Controlled Pre-Failure Edge Screening",
+      "status": "under_review",
+      "year": 2026,
+      "venue": "Applied Soft Computing",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "budgeted-eccentricity",
+      "title": "Budgeted Eccentricity Reduction in Graphs: Structural Bounds and Algorithms",
+      "status": "under_review",
+      "year": 2026,
+      "venue": "Discrete Applied Mathematics",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "fallible-scientific-rules",
+      "title": "Learning When to Trust Fallible Scientific Rules: Applicability-Gated Molecular Property Prediction under Chemical-Space Shift",
+      "status": "under_review",
+      "year": 2026,
+      "venue": "Artificial Intelligence and Applications",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "vele-corona",
+      "title": "Vertex Eccentricity Labeled Energy of Corona Graphs",
+      "status": "under_review",
+      "year": 2026,
+      "venue": "Communications in Mathematics and Applications",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "nilgai-bibliometric",
+      "title": "Mapping the Intellectual Structure and Thematic Evolution of Nilgai (Boselaphus tragocamelus) Research: A Comprehensive Bibliometric Analysis",
+      "status": "under_review",
+      "year": 2026,
+      "venue": "Annals of Arid Zone",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "semiconductor-selective-ml",
+      "title": "Chronology-Aware Reliable Semiconductor Quality Prediction with Calibrated Selective Machine Learning",
+      "status": "submitted",
+      "year": 2026,
+      "venue": "Journal of Engineering and Technology for Industrial Applications (ITEGAM-JETIA)",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "topk-closeness",
+      "title": "Certified Top-k Closeness Rankings under Interval Edge-Weight Uncertainty",
+      "status": "submitted",
+      "year": 2026,
+      "venue": "IAENG International Journal of Applied Mathematics",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "test-bank",
+      "title": "Fault-Tolerant Test-Bank Design under Item Withdrawal: Hall-Type Certificates and Minimum-Cost Reinforcement",
+      "status": "submitted",
+      "year": 2026,
+      "venue": "IAENG International Journal of Applied Mathematics",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "conformal-concrete",
+      "title": "Calibration Transfer of Conformal Prediction for Concrete Strength Across SCM Composition Regimes",
+      "status": "submitted",
+      "year": 2026,
+      "venue": "Journal of Computers, Mechanical and Management",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "sombor-defect",
+      "title": "Sharp Defect Bounds for the Sombor Index under Degree-Preserving Edge Switches",
+      "status": "submitted",
+      "year": 2026,
+      "venue": "Note di Matematica",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "egfr-representation",
+      "title": "Mechanisms of Representation Degeneracy and Generalization Limits of Classical Molecular Graph Descriptors in EGFR QSAR",
+      "status": "current_research",
+      "year": 2026,
+      "note": "Revised manuscript being prepared for resubmission; public reproducibility repository maintained on GitHub.",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    {
+      "id": "mutation-geodesic-shielding-paper",
+      "title": "Mutation Geodesic Shielding Characterizes Residue-Network Susceptibility in Protein Stability",
+      "status": "current_research",
+      "year": 2026,
+      "note": "Manuscript and reproducibility package prepared for journal submission.",
+      "visibility": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    }
+  ],
+  "research_programmes": [
+    {
+      "id": "mgsc",
+      "repository": "mutation-geodesic-shielding-protein-stability",
+      "title": "Mutation Geodesic Shielding for Protein Stability",
+      "pillar": "Molecular & Biomolecular Graphs",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "assam",
+      "repository": "Assam-Road-Inspection-Benchmark",
+      "title": "Assam Road Inspection Benchmark",
+      "pillar": "Networked Systems & Resilience",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "claim-evidence",
+      "repository": "Claim-Evidence-Consistency-Reproducibility",
+      "title": "Claim–Evidence Consistency in Labeled Graphs",
+      "pillar": "Graph Theory & Formal Methods",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "msw",
+      "repository": "global-msw-reliability-under-shift",
+      "title": "Global MSW Reliability Under Geographic Shift",
+      "pillar": "Reliable Scientific AI & Evidence",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "vele-grid",
+      "repository": "VELE-PowerGrid-Reproducibility",
+      "title": "VELE Power-Grid Vulnerability Screening",
+      "pillar": "Networked Systems & Resilience",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "egfr",
+      "repository": "EGFR-Graph-QSAR-Reproducibility",
+      "title": "EGFR Graph QSAR — Representation Limits",
+      "pillar": "Molecular & Biomolecular Graphs",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "agrr",
+      "repository": "applicability-gated-molecular-ai",
+      "title": "Applicability-Gated Molecular AI",
+      "pillar": "Reliable Scientific AI & Evidence",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "conformal",
+      "repository": "PAPER-JCMM-reproducibility",
+      "title": "Calibration Transfer of Conformal Prediction",
+      "pillar": "Reliable Scientific AI & Evidence",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      }
+    }
+  ],
+  "sync_policy": {
+    "allowed_statuses": [
+      "published",
+      "accepted",
+      "under_review",
+      "submitted",
+      "current_research"
+    ],
+    "forbidden_public_statuses": [
+      "rejected",
+      "withdrawn"
+    ],
+    "default_visibility": {
+      "published": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "accepted": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "under_review": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      },
+      "submitted": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      },
+      "current_research": {
+        "cv": true,
+        "portfolio": false,
+        "github_profile": false
+      }
+    },
+    "protected_visual_sections": [
+      "portfolio hero artwork",
+      "portfolio research cards",
+      "GitHub profile research covers",
+      "GitHub profile hero artwork"
+    ]
+  }
+}
