@@ -28,7 +28,9 @@
         "cv": true,
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "portfolio_card_title": "Program Head · Data Science",
+      "portfolio_card_copy": "Academic planning, curriculum coordination, faculty coordination, student mentoring and programme-quality support for Data Science programmes."
     },
     {
       "id": "assistant-professor",
@@ -41,7 +43,9 @@
         "cv": true,
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "portfolio_card_title": "Assistant Professor · Mathematics",
+      "portfolio_card_copy": "Teaching, mentoring and interdisciplinary research across mathematics, computer applications, AI and data-oriented programmes."
     },
     {
       "id": "timetable-coordinator",
@@ -66,7 +70,9 @@
         "cv": false,
         "portfolio": true,
         "github_profile": true
-      }
+      },
+      "portfolio_card_title": "Area Chair · Advanced Computing",
+      "portfolio_card_copy": "Coordinating advanced-computing research themes across graph/game theory, optimization, parallel and green computing, quantum computing and related areas."
     },
     {
       "id": "saurashtra-assistant-professor",
@@ -512,5 +518,9 @@
       "GitHub profile research covers",
       "GitHub profile hero artwork"
     ]
+  },
+  "portfolio_service_card_tail": {
+    "title": "Academic Coordination",
+    "copy": "Timetable operations, examinations, documentation, industrial exposure, student activities, committees and institutional quality processes."
   }
 }
