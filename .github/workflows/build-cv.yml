@@ -1,0 +1,42 @@
+name: Build latest academic CV
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "cv/**"
+      - "assets/profile.jpg"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX CV
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_DR.SLG.tex
+          working_directory: cv
+          latexmk_use_xelatex: false
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode
+
+      - name: Publish PDF to portfolio assets
+        shell: bash
+        run: |
+          cp cv/CV_DR.SLG.pdf assets/CV_DR_Sunilgar_L_Gusai.pdf
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/CV_DR_Sunilgar_L_Gusai.pdf
+          if git diff --cached --quiet; then
+            echo "CV PDF already current."
+          else
+            git commit -m "chore: rebuild latest academic CV"
+            git push
+          fi
