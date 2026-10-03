@@ -1,0 +1,61 @@
+name: Sync academic identity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/academic-profile.json"
+      - "scripts/sync_academic_identity.py"
+      - ".github/workflows/academic-identity-sync.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "data/academic-profile.json"
+      - "scripts/sync_academic_identity.py"
+      - "index.html"
+      - "cv/**"
+      - ".github/workflows/academic-identity-sync.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: academic-identity-sync-main
+  cancel-in-progress: false
+
+jobs:
+  validate-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate academic master record
+        run: python scripts/sync_academic_identity.py --validate-only
+
+      - name: Generate controlled academic surfaces
+        run: python scripts/sync_academic_identity.py
+
+      - name: Show generated changes on pull requests
+        if: github.event_name == 'pull_request'
+        run: git diff --stat && git diff -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex || true
+
+      - name: Commit synchronized surfaces on main
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex; then
+            echo "Academic identity surfaces are already synchronized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex
+          git commit -m "chore: sync academic identity surfaces"
+          git push
