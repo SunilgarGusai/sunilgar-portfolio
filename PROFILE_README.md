@@ -27,16 +27,14 @@ Conformal prediction · calibration · uncertainty · scientific-rule gating · 
 
 ## Selected open research
 
-Representative public reproducibility projects include:
+Representative public reproducibility projects:
 
-- Mutation Geodesic Shielding for Protein Stability
-- Assam Road Inspection Benchmark
-- Claim–Evidence Consistency in Labeled Graphs
-- Global MSW Reliability Under Geographic Shift
 - VELE Power-Grid Vulnerability Screening
 - EGFR Graph QSAR — Representation Limits
+- Mutation Geodesic Shielding for Protein Stability
 - Applicability-Gated Molecular AI
-- Calibration Transfer of Conformal Prediction
+
+A broader set of public research artefacts remains accessible through the portfolio and GitHub repositories.
 
 ---
 
