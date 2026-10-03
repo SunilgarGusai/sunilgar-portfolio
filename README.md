@@ -17,16 +17,19 @@ The public research programme is organised around four connected directions:
 3. **Molecular & Biomolecular Graphs** — QSAR, representation degeneracy, residue-contact networks, mutation geometry and protein stability.
 4. **Reliable Scientific AI & Evidence** — distribution shift, calibration, conformal prediction, scientific-rule gating, evidence consistency and reproducible decision analysis.
 
-## Selected public research
+## Eight public research programmes
 
-Representative public reproducibility projects:
+### Current frontier
+- [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
+- [Assam Road Inspection Benchmark](https://github.com/SunilgarGusai/Assam-Road-Inspection-Benchmark)
+- [Claim–Evidence Consistency in Labeled Graphs](https://github.com/SunilgarGusai/Claim-Evidence-Consistency-Reproducibility)
+- [Global MSW Reliability Under Geographic Shift](https://github.com/SunilgarGusai/global-msw-reliability-under-shift)
 
+### Established open research
 - [VELE Power-Grid Vulnerability Screening](https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility)
 - [EGFR Graph QSAR — Representation Limits](https://github.com/SunilgarGusai/EGFR-Graph-QSAR-Reproducibility)
-- [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
 - [Applicability-Gated Molecular AI](https://github.com/SunilgarGusai/applicability-gated-molecular-ai)
-
-The portfolio website provides the broader research catalogue without treating repository count as an academic metric.
+- [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
 
 ## Recent scholarly milestones
 
@@ -38,6 +41,7 @@ The portfolio website provides the broader research catalogue without treating r
 ## Academic leadership
 
 - **Program Head, Data Science Programs**, Marwadi University.
+- **Area Chair — Advanced Computing**, Department of AI/ML/DS.
 - **Assistant Professor of Mathematics**, Faculty of Computer Applications.
 - Academic coordination, timetable operations, curriculum contribution, examinations, mentoring, industrial exposure and institutional quality work.
 
