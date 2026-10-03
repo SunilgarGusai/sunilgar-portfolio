@@ -36,16 +36,16 @@ html[data-theme="dark"]{--bg:#07101d;--surface:rgba(14,28,48,.82);--surface-soli
 .project-card.is-filtered-out{display:none}
 .accepted-item{background:linear-gradient(90deg,rgba(16,185,129,.055),transparent)}
 .accepted-item .pub-year{color:#15966e;font-size:14px;text-transform:uppercase;letter-spacing:.08em}
-.pipeline-section{padding-top:70px;background:linear-gradient(180deg,transparent,rgba(59,130,246,.035),transparent)}
-.pipeline-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-.pipeline-card{min-height:180px;padding:23px;border:1px solid var(--line);border-radius:20px;background:var(--surface);box-shadow:var(--shadow-soft);transition:transform .22s ease,border-color .22s ease}
-.pipeline-card:hover{transform:translateY(-3px);border-color:rgba(59,130,246,.28)}
-.pipeline-card h3{margin:18px 0 9px;font:800 16px/1.4 var(--font-display);letter-spacing:-.02em}
-.pipeline-card p{margin:0;color:var(--muted);font-size:11px}
-.pipeline-kicker{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;border:1px solid var(--line)}
-.pipeline-kicker.under-review{color:#6d5dfc;background:rgba(109,93,252,.08);border-color:rgba(109,93,252,.17)}
-.pipeline-kicker.submitted{color:#167da0;background:rgba(34,211,238,.08);border-color:rgba(34,211,238,.18)}
-.pipeline-note{margin:22px 0 0;padding:17px 20px;border-left:3px solid var(--violet);border-radius:0 14px 14px 0;background:rgba(139,92,246,.06);color:var(--muted);font-size:12px}
-.pipeline-note strong{color:var(--text)}
-@media(max-width:1050px){.nav-links{gap:14px;font-size:12px}.pipeline-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.project-group-heading{align-items:flex-start;flex-direction:column;gap:3px}.research-filters{gap:7px}.research-filter{padding:8px 10px;font-size:10px}.pipeline-grid{grid-template-columns:1fr}.pipeline-card{min-height:auto}}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1050px){.nav-links{gap:14px;font-size:12px}}
+@media(max-width:650px){.project-group-heading{align-items:flex-start;flex-direction:column;gap:3px}.research-filters{gap:7px}.research-filter{padding:8px 10px;font-size:10px}}
