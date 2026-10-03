@@ -87,11 +87,12 @@
   const heroCopy = document.querySelector('.hero-copy');
   const heroLead = heroCopy?.querySelector('.lead');
   const focusItems = [
-    'Spectral graph theory & graph energy',
-    'Network resilience & failure screening',
-    'Molecular graphs, QSPR & QSAR',
-    'Reliable scientific AI & uncertainty',
-    'Open, inspectable reproducibility'
+    'Spectral graph theory & formal graph methods',
+    'Network resilience, power grids & flood roads',
+    'Molecular graphs, QSAR & representation limits',
+    'Protein residue networks & mutation geometry',
+    'Reliable scientific AI under distribution shift',
+    'Claim–evidence consistency & reproducibility'
   ];
 
   if (heroCopy && heroLead) {
@@ -165,6 +166,28 @@
     }, { threshold: 0.35 });
     counterObserver.observe(signalBar);
   }
+
+  // Research-family filter: keeps both frontier and established programmes in one coherent catalogue.
+  const researchFilters = [...document.querySelectorAll('.research-filter')];
+  const researchCards = [...document.querySelectorAll('.project-card[data-family]')];
+  const projectGroups = [...document.querySelectorAll('.project-group')];
+
+  const applyResearchFilter = (filter) => {
+    researchCards.forEach((card) => {
+      const families = (card.dataset.family || '').split(/\s+/).filter(Boolean);
+      const visible = filter === 'all' || families.includes(filter);
+      card.classList.toggle('is-filtered-out', !visible);
+    });
+    projectGroups.forEach((group) => {
+      const cards = [...group.querySelectorAll('.project-card[data-family]')];
+      group.hidden = cards.length > 0 && cards.every((card) => card.classList.contains('is-filtered-out'));
+    });
+    researchFilters.forEach((button) => button.classList.toggle('active', button.dataset.filter === filter));
+  };
+
+  researchFilters.forEach((button) => {
+    button.addEventListener('click', () => applyResearchFilter(button.dataset.filter || 'all'));
+  });
 
   // Interactive research cards: cursor light follows the card, not the page.
   document.querySelectorAll('.project-card').forEach((card) => {

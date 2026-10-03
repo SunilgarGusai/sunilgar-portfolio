@@ -1,0 +1,93 @@
+{
+  "version": "2026-10-03",
+  "source_note": "Public-facing catalogue aligned with the GitHub research ecosystem. Editorial status is intentionally conservative.",
+  "projects": [
+    {
+      "repository": "mutation-geodesic-shielding-protein-stability",
+      "title": "Mutation Geodesic Shielding for Protein Stability",
+      "family": [
+        "molecular",
+        "graph"
+      ],
+      "status": "Public · Manuscript submission",
+      "metric1": "382,543 substitutions",
+      "metric2": "38.5% whole-mutation shielding"
+    },
+    {
+      "repository": "Assam-Road-Inspection-Benchmark",
+      "title": "Assam Road Inspection Benchmark",
+      "family": [
+        "networks",
+        "reliable-ai"
+      ],
+      "status": "Public · Frozen benchmark",
+      "metric1": "211,175 edge-event observations",
+      "metric2": "4 flood events"
+    },
+    {
+      "repository": "Claim-Evidence-Consistency-Reproducibility",
+      "title": "Claim–Evidence Consistency in Labeled Graphs",
+      "family": [
+        "graph",
+        "reliable-ai"
+      ],
+      "status": "Public · Submission release",
+      "metric1": "12/12 tests",
+      "metric2": "5,000-vertex scalability"
+    },
+    {
+      "repository": "global-msw-reliability-under-shift",
+      "title": "Global MSW Reliability Under Geographic Shift",
+      "family": [
+        "reliable-ai",
+        "networks"
+      ],
+      "status": "Public · Submission release",
+      "metric1": "4 reliability lenses",
+      "metric2": "v1.0.0 submission release"
+    },
+    {
+      "repository": "VELE-PowerGrid-Reproducibility",
+      "title": "VELE Power-Grid Vulnerability Screening",
+      "family": [
+        "graph",
+        "networks"
+      ],
+      "status": "Public · Submission release",
+      "metric1": "784 branch outages",
+      "metric2": "1,692 progressive states"
+    },
+    {
+      "repository": "EGFR-Graph-QSAR-Reproducibility",
+      "title": "EGFR Graph QSAR — Representation Limits",
+      "family": [
+        "molecular",
+        "reliable-ai"
+      ],
+      "status": "Public · Reproducibility",
+      "metric1": "10,056 compounds",
+      "metric2": "19 graph invariants"
+    },
+    {
+      "repository": "applicability-gated-molecular-ai",
+      "title": "Applicability-Gated Molecular AI",
+      "family": [
+        "molecular",
+        "reliable-ai"
+      ],
+      "status": "Public · Frozen outputs",
+      "metric1": "5 molecular resources",
+      "metric2": "3 split families"
+    },
+    {
+      "repository": "PAPER-JCMM-reproducibility",
+      "title": "Calibration Transfer of Conformal Prediction",
+      "family": [
+        "reliable-ai"
+      ],
+      "status": "Public · Reproducibility",
+      "metric1": "1,030 observations",
+      "metric2": "427 physical mix designs"
+    }
+  ]
+}
