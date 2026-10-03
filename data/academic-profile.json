@@ -15,7 +15,11 @@
     "scopus_author_id": "60059223900",
     "profile_suffix": "Ph.D. · Graph Theorist · Computational Researcher",
     "portfolio_eyebrow_suffix": "Ph.D. Mathematics · Open Research",
-    "profile_teaching_tail": "alongside teaching, curriculum work, timetable coordination, examinations, student mentoring, research collaboration and institutional service."
+    "profile_teaching_tail": "alongside teaching, curriculum work, timetable coordination, examinations, student mentoring, research collaboration and institutional service.",
+    "profile_leadership_role_ids": [
+      "program-head-ds",
+      "area-chair-advanced-computing"
+    ]
   },
   "roles": [
     {
@@ -31,7 +35,8 @@
       },
       "portfolio_card_title": "Program Head · Data Science",
       "portfolio_card_copy": "Academic planning, curriculum coordination, faculty coordination, student mentoring and programme-quality support for Data Science programmes.",
-      "cv_heading": "Program Head, Data Science Programs, Marwadi University, Rajkot"
+      "cv_heading": "Program Head, Data Science Programs, Marwadi University, Rajkot",
+      "profile_sentence_title": "Program Head for Data Science Programs"
     },
     {
       "id": "assistant-professor",
@@ -75,7 +80,8 @@
         "github_profile": true
       },
       "portfolio_card_title": "Area Chair · Advanced Computing",
-      "portfolio_card_copy": "Coordinating advanced-computing research themes across graph/game theory, optimization, parallel and green computing, quantum computing and related areas."
+      "portfolio_card_copy": "Coordinating advanced-computing research themes across graph/game theory, optimization, parallel and green computing, quantum computing and related areas.",
+      "profile_sentence_title": "Area Chair for Advanced Computing"
     },
     {
       "id": "saurashtra-assistant-professor",
