@@ -1,6 +1,12 @@
 name: Audit public repository hygiene
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - "data/repository-hygiene-policy.json"
+      - "scripts/audit_repository_hygiene.py"
+      - ".github/workflows/repository-hygiene-audit.yml"
   workflow_dispatch:
   schedule:
     - cron: "15 3 * * 1"
