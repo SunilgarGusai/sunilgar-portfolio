@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-04.2",
-  "updated_on": "2026-10-04",
+  "identity_version": "2026-10-06.1",
+  "updated_on": "2026-10-06",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
     "primary_title": "Assistant Professor of Mathematics",
@@ -382,7 +382,7 @@
       },
       "short_title": "Mutation Geodesic Shielding",
       "icon": "🧬",
-      "status_label": "Public · Manuscript submission"
+      "status_label": "Public · Submission-ready"
     },
     {
       "id": "assam",
@@ -418,7 +418,7 @@
       },
       "short_title": "Claim–Evidence Consistency",
       "icon": "◈",
-      "status_label": "Public · Submission release"
+      "status_label": "Public · Frozen research release"
     },
     {
       "id": "msw",
@@ -436,7 +436,7 @@
       },
       "short_title": "Global MSW Reliability",
       "icon": "🌍",
-      "status_label": "Public · Submission release"
+      "status_label": "Public · Frozen research release"
     },
     {
       "id": "vele-grid",
@@ -454,7 +454,7 @@
       },
       "short_title": "VELE Power-Grid",
       "icon": "⚡",
-      "status_label": "Public · Submission release"
+      "status_label": "Public · Frozen research release"
     },
     {
       "id": "egfr",
