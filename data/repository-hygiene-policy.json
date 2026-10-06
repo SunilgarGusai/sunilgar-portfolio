@@ -1,0 +1,253 @@
+{
+  "version": "2026-10-06",
+  "owner": "SunilgarGusai",
+  "repositories": [
+    {
+      "name": "sunilgar-portfolio",
+      "kind": "portfolio",
+      "description": "Academic research portfolio of Dr. Sunilgar L. Gusai spanning graph theory, network resilience, molecular and biomolecular graphs, reliable scientific AI, and reproducible computational research.",
+      "homepage": "https://sunilgargusai.github.io/sunilgar-portfolio/",
+      "topics": [
+        "academic-portfolio",
+        "graph-theory",
+        "network-science",
+        "molecular-graphs",
+        "scientific-machine-learning",
+        "reproducible-research",
+        "research-portfolio",
+        "data-science"
+      ],
+      "required_files": [
+        "README.md",
+        "index.html",
+        "data/academic-profile.json"
+      ],
+      "expected_license": null,
+      "ci_required": true
+    },
+    {
+      "name": "SunilgarGusai",
+      "kind": "profile",
+      "description": "Academic research profile of Dr. Sunilgar L. Gusai — graph theory, network resilience, molecular and biomolecular graphs, and reliable scientific AI.",
+      "homepage": "https://sunilgargusai.github.io/sunilgar-portfolio/",
+      "topics": [
+        "academic-profile",
+        "graph-theory",
+        "network-science",
+        "qsar",
+        "scientific-machine-learning",
+        "reproducible-research"
+      ],
+      "required_files": [
+        "README.md"
+      ],
+      "expected_license": null,
+      "ci_required": true
+    },
+    {
+      "name": "PAPER-JCMM-reproducibility",
+      "kind": "research",
+      "description": "Reproducibility materials for calibration transfer of conformal prediction for concrete strength across SCM composition regimes.",
+      "topics": [
+        "civil-engineering",
+        "concrete-compressive-strength",
+        "conformal-prediction",
+        "covariate-shift",
+        "machine-learning",
+        "python",
+        "reproducible-research",
+        "scikit-learn",
+        "supplementary-cementitious-materials",
+        "uncertainty-quantification"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt",
+        ".github/workflows/repository-validation.yml"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "VELE-PowerGrid-Reproducibility",
+      "kind": "research",
+      "description": "Reproducible VELE power-grid vulnerability screening with MATPOWER/DC-flow validation, islanding, load-shedding proxies, branch N−1 analysis, and corrected reinforcement heuristics.",
+      "topics": [
+        "spectral-graph-theory",
+        "graph-energy",
+        "power-systems",
+        "network-resilience",
+        "matpower",
+        "dc-power-flow",
+        "vulnerability-analysis",
+        "network-science",
+        "reproducible-research",
+        "python"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt",
+        ".github/workflows/repository-validation.yml"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "applicability-gated-molecular-ai",
+      "kind": "research",
+      "description": "Reproducible code and results for applicability-gated rule-residual learning under chemical-space shift.",
+      "topics": [
+        "molecular-machine-learning",
+        "qsar",
+        "cheminformatics",
+        "chemical-space",
+        "applicability-domain",
+        "uncertainty-quantification",
+        "scientific-machine-learning",
+        "rdkit",
+        "reproducible-research",
+        "python"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "requirements.txt"
+      ],
+      "expected_license": null,
+      "ci_required": true,
+      "note": "Repository-wide software license intentionally not asserted pending provenance review."
+    },
+    {
+      "name": "EGFR-Graph-QSAR-Reproducibility",
+      "kind": "research",
+      "description": "Reproducible benchmark of classical molecular graph descriptors against RDKit2D and ECFP4 for EGFR pIC50 prediction under scaffold and chemical-space shift.",
+      "topics": [
+        "egfr",
+        "qsar",
+        "cheminformatics",
+        "molecular-graph-descriptors",
+        "rdkit",
+        "ecfp4",
+        "scaffold-split",
+        "chemical-space",
+        "representation-degeneracy",
+        "reproducible-research"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "mutation-geodesic-shielding-protein-stability",
+      "kind": "research",
+      "description": "Interpretable mutation-conditioned residue-network analysis using the Mutation Geodesic Shielding Certificate (MGSC), with frozen protein-stability validation and reproducible evidence.",
+      "topics": [
+        "bioinformatics",
+        "computational-biology",
+        "graph-theory",
+        "molecular-modeling",
+        "mutation",
+        "protein-stability",
+        "protein-structure",
+        "reproducible-research",
+        "residue-interaction-network",
+        "shortest-paths"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt",
+        ".github/workflows/repository-validation.yml"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "Assam-Road-Inspection-Benchmark",
+      "kind": "research",
+      "description": "Frozen reproducibility benchmark for leakage-controlled flood-road inspection prioritisation across four Assam flood events.",
+      "topics": [
+        "assam",
+        "disaster-risk-reduction",
+        "flood-risk",
+        "machine-learning",
+        "network-science",
+        "open-science",
+        "remote-sensing",
+        "reproducibility",
+        "road-networks",
+        "spatial-validation"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "Claim-Evidence-Consistency-Reproducibility",
+      "kind": "research",
+      "description": "Reproducibility companion for claim–evidence consistency in labeled graphs: complexity, certificates, correction, graph algorithms, and deterministic validation.",
+      "topics": [
+        "graph-algorithms",
+        "claim-verification",
+        "evidence-graphs",
+        "constraint-satisfaction",
+        "regular-path-queries",
+        "computational-complexity",
+        "verification-certificates",
+        "provenance",
+        "trustworthy-ai",
+        "reproducible-research"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt",
+        ".github/workflows/repository-validation.yml"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    },
+    {
+      "name": "global-msw-reliability-under-shift",
+      "kind": "research",
+      "description": "Reproducibility package for reliability auditing of global municipal-waste service prediction under geographic shift, subgroup bias, uncertainty, and decision prioritisation.",
+      "topics": [
+        "municipal-solid-waste",
+        "geographic-shift",
+        "distribution-shift",
+        "machine-learning",
+        "uncertainty-quantification",
+        "conformal-prediction",
+        "sustainability",
+        "world-bank",
+        "reliable-ai",
+        "reproducible-research"
+      ],
+      "required_files": [
+        "README.md",
+        "CITATION.cff",
+        "LICENSE",
+        "requirements.txt",
+        ".github/workflows/repository-validation.yml"
+      ],
+      "expected_license": "MIT",
+      "ci_required": true
+    }
+  ]
+}
