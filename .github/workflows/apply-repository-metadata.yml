@@ -6,6 +6,7 @@ on:
     paths:
       - "data/repository-hygiene-policy.json"
       - "scripts/apply_repository_metadata.py"
+      - "data/repository-metadata-apply-trigger.txt"
       - ".github/workflows/apply-repository-metadata.yml"
   workflow_dispatch:
     inputs:
@@ -35,10 +36,16 @@ jobs:
           REPOSITORY_ADMIN_TOKEN: ${{ secrets.REPOSITORY_ADMIN_TOKEN }}
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "push" ] || [ "${{ inputs.dry_run }}" = "true" ]; then
-            python scripts/apply_repository_metadata.py --dry-run
-          else
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ inputs.dry_run }}" = "true" ]; then
+              python scripts/apply_repository_metadata.py --dry-run
+            else
+              python scripts/apply_repository_metadata.py
+            fi
+          elif git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}" | grep -qx "data/repository-metadata-apply-trigger.txt"; then
             python scripts/apply_repository_metadata.py
+          else
+            python scripts/apply_repository_metadata.py --dry-run
           fi
 
       - name: Security note
