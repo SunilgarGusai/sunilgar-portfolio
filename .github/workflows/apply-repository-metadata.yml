@@ -1,0 +1,42 @@
+name: Apply public repository metadata
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only; do not change GitHub About/Topics metadata"
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio control repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply approved repository metadata
+        env:
+          REPOSITORY_ADMIN_TOKEN: ${{ secrets.REPOSITORY_ADMIN_TOKEN }}
+        shell: bash
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python scripts/apply_repository_metadata.py --dry-run
+          else
+            python scripts/apply_repository_metadata.py
+          fi
+
+      - name: Security note
+        if: always()
+        run: |
+          echo "This workflow only synchronizes repository description, homepage, and Topics from data/repository-hygiene-policy.json."
+          echo "It does not change repository visibility, branches, collaborators, releases, source files, or scientific results."
