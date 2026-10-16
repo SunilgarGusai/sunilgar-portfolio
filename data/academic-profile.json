@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-06.1",
-  "updated_on": "2026-10-06",
+  "identity_version": "2026-10-16.1",
+  "updated_on": "2026-10-16",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
     "primary_title": "Assistant Professor of Mathematics",
@@ -115,6 +115,39 @@
     }
   ],
   "scholarship": [
+    {
+      "id": "reciprocal-irregularity-subdivision",
+      "title": "Reciprocal Irregularity Under Partial Edge Subdivision",
+      "status": "published",
+      "year": 2026,
+      "authors": "Gusai Sunilgar Laxmangar",
+      "venue": "International Journal of Advanced Multidisciplinary Research and Studies",
+      "citation_detail": "6(5), 1336–1341, September–October 2026",
+      "publication_url": "https://www.multiresearchjournal.com/arclist/list-2026.6.5/id-7021",
+      "article_id": "26-6-5-165",
+      "tags": [
+        "Graph Irregularity",
+        "Edge Subdivision",
+        "Graph Operations"
+      ],
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "cv_citation_detail": "Vol.~6(5), pp.~1336--1341, September--October 2026",
+      "show_doi": {
+        "cv": false,
+        "portfolio": false,
+        "github_profile": false
+      },
+      "show_publication_url": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "profile_summary_line": "**Gusai Sunilgar Laxmangar** · *International Journal of Advanced Multidisciplinary Research and Studies*, **6**(5), 1336–1341, Sep–Oct 2026"
+    },
     {
       "id": "wiener-harary-edge-failure",
       "title": "Edge Failure Sensitivity of Wiener and Harary Indices in Classical Network Graphs",
@@ -366,6 +399,24 @@
     }
   ],
   "research_programmes": [
+    {
+      "id": "operation-route-spectra",
+      "repository": "operation-marked-route-spectra",
+      "title": "Operation-Marked Eccentricity-Weighted Route Spectra",
+      "pillar": "Graph Theory & Formal Methods",
+      "visibility": {
+        "cv": false,
+        "portfolio": true,
+        "github_profile": true
+      },
+      "showcase": {
+        "portfolio": true,
+        "github_profile": true
+      },
+      "short_title": "Operation-Marked Route Spectra",
+      "icon": "λ",
+      "status_label": "Public · Exact proof suites"
+    },
     {
       "id": "mgsc",
       "repository": "mutation-geodesic-shielding-protein-stability",
