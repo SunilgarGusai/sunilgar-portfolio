@@ -1,0 +1,30 @@
+/* Portfolio V4: 3D Research Observatory */
+.observatory-section{padding-top:86px;overflow:hidden}
+.observatory-heading{max-width:860px}
+.observatory-shell{position:relative;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,.55fr);grid-template-rows:minmax(560px,68vh) auto;gap:16px;padding:16px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(7,16,29,.97),rgba(12,24,49,.96));box-shadow:0 35px 110px rgba(4,13,28,.28);overflow:hidden}
+.observatory-shell::before{content:"";position:absolute;inset:-30%;pointer-events:none;background:radial-gradient(circle at 25% 25%,rgba(59,130,246,.14),transparent 26%),radial-gradient(circle at 75% 68%,rgba(139,92,246,.13),transparent 24%)}
+.observatory-stage{position:relative;min-height:560px;border:1px solid rgba(187,211,242,.12);border-radius:22px;overflow:hidden;background:radial-gradient(circle at 50% 42%,rgba(40,79,150,.16),transparent 40%),linear-gradient(180deg,#07101d,#08162b);outline:none}
+.observatory-stage:focus-visible{box-shadow:0 0 0 3px rgba(96,165,250,.45)}
+.observatory-stage canvas{display:block;width:100%;height:100%;touch-action:none}
+.observatory-loading{position:absolute;inset:0;z-index:3;display:grid;place-items:center;color:#9fb3cf;font-size:12px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none;transition:opacity .3s ease}
+.observatory-stage.is-ready .observatory-loading{opacity:0}
+.observatory-tooltip{position:absolute;z-index:4;display:none;max-width:260px;padding:8px 10px;border:1px solid rgba(198,218,244,.16);border-radius:10px;background:rgba(6,15,29,.9);color:#eaf3ff;font-size:11px;font-weight:700;pointer-events:none;backdrop-filter:blur(10px);transform:translate(12px,12px)}
+.observatory-tooltip.visible{display:block}
+.observatory-panel{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;gap:26px;min-height:560px;padding:28px;border:1px solid rgba(187,211,242,.12);border-radius:22px;background:linear-gradient(165deg,rgba(255,255,255,.075),rgba(255,255,255,.035));color:#f7fbff}
+.observatory-kicker{display:block;margin-bottom:20px;color:#7fb5ff;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.observatory-panel h3{margin:0 0 14px;font:800 25px/1.24 var(--font-display);letter-spacing:-.035em}
+.observatory-panel p{margin:0 0 10px;color:#a7b8cf;font-size:12px}
+.observatory-panel #observatory-pillar{color:#dce9fb;font-weight:800}
+.observatory-panel #observatory-status{display:inline-flex;width:max-content;max-width:100%;padding:7px 9px;border:1px solid rgba(96,165,250,.22);border-radius:999px;background:rgba(59,130,246,.1);color:#90c3ff;font-size:10px}
+.observatory-link{width:100%}
+.observatory-help{padding-top:18px;border-top:1px solid rgba(187,211,242,.12);font-size:10px!important}
+.observatory-filters{position:relative;z-index:2;grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;padding:2px}
+.observatory-filter{padding:9px 12px;border:1px solid rgba(187,211,242,.14);border-radius:999px;background:rgba(255,255,255,.045);color:#a9bad0;cursor:pointer;font-size:10px;font-weight:800;transition:.2s ease}
+.observatory-filter:hover,.observatory-filter.active{border-color:rgba(96,165,250,.48);background:rgba(59,130,246,.13);color:#eef6ff;transform:translateY(-1px)}
+.observatory-noscript{grid-column:1/-1;margin:0;color:#afbdd0;font-size:12px}
+.project-wide{grid-column:1/-1;min-height:360px}
+.newest-programme-group .project-wide h3{max-width:880px}
+.newest-programme-group .project-wide>p{max-width:930px}
+@media(max-width:900px){.observatory-shell{grid-template-columns:1fr;grid-template-rows:500px auto auto}.observatory-stage{min-height:500px}.observatory-panel{min-height:auto}.observatory-panel h3{font-size:22px}.observatory-link{width:auto;align-self:flex-start}}
+@media(max-width:570px){.observatory-shell{grid-template-rows:430px auto auto;padding:10px;border-radius:22px}.observatory-stage{min-height:430px;border-radius:16px}.observatory-panel{padding:22px;border-radius:16px}.observatory-filters{gap:6px}.observatory-filter{flex:1 1 46%;text-align:center}.project-wide{min-height:auto}}
+@media(prefers-reduced-motion:reduce){.observatory-filter{transition:none}.observatory-filter:hover{transform:none}}
