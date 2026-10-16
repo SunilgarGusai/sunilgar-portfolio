@@ -163,18 +163,24 @@ def render_portfolio_publications(data: dict) -> str:
             venue = html.escape(item["venue"])
             detail = html.escape(item.get("citation_detail", ""))
             p = f"<p>{authors_html}. <em>{venue}</em>, {detail}.</p>"
-            doi = ""
+            action = ""
             if item.get("doi") and item.get("show_doi", {}).get("portfolio", True):
-                doi_url = "https://doi.org/" + item["doi"]
-                doi = (
+                action_url = "https://doi.org/" + item["doi"]
+                action = (
                     '<div class="publication-actions">'
-                    f'<a href="{html.escape(doi_url)}" target="_blank" rel="noopener">DOI ↗</a>'
+                    f'<a href="{html.escape(action_url)}" target="_blank" rel="noopener">DOI ↗</a>'
+                    "</div>"
+                )
+            elif item.get("publication_url") and item.get("show_publication_url", {}).get("portfolio", True):
+                action = (
+                    '<div class="publication-actions">'
+                    f'<a href="{html.escape(item["publication_url"])}" target="_blank" rel="noopener">Article ↗</a>'
                     "</div>"
                 )
             article = (
                 '<article class="publication-item">'
                 f'<div class="pub-year">{item["year"]}</div>'
-                f'<div class="pub-content"><h3>{title}</h3>{p}{doi}'
+                f'<div class="pub-content"><h3>{title}</h3>{p}{action}'
                 f'<div class="pub-tags">{tags}</div></div></article>'
             )
         articles.append("    " + article)
@@ -248,7 +254,11 @@ def render_cv_publications(data: dict) -> str:
                 + (
                     rf" DOI: \url{{https://doi.org/{item['doi']}}}"
                     if item.get("doi") and item.get("show_doi", {}).get("cv", True)
-                    else ""
+                    else (
+                        rf" Publication page: \url{{{item['publication_url']}}}"
+                        if item.get("publication_url") and item.get("show_publication_url", {}).get("cv", True)
+                        else ""
+                    )
                 ),
                 "",
             ]
