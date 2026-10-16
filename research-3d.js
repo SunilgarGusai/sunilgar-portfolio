@@ -338,7 +338,10 @@ if (mount) {
         group.rotation.y += .0007;
         stars.rotation.y -= .00012;
         projectMeshes.forEach((mesh,i) => {
-          if (mesh.visible) mesh.position.y += Math.sin((frame+i*17)*.018)*.00045;
+          if (mesh.visible && mesh !== selected) {
+            const pulse = 1 + Math.sin((frame+i*17)*.018)*.018;
+            mesh.scale.setScalar(mesh === hovered ? 1.24 * pulse : pulse);
+          }
         });
       }
       controls.update();
