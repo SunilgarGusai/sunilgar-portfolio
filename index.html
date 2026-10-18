@@ -20,7 +20,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="research-3d.css" />
+  <link rel="stylesheet" href="research-3d.css?v=20261018b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -59,7 +59,7 @@
         <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
       </div>
       <div class="nav-links">
-        <a href="#research">Research</a><a href="#observatory">3D Observatory</a><a href="#open-research">Open Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#leadership">Leadership</a><a href="#latest">Latest</a><a href="#contact">Contact</a>
+        <a href="#research">Research</a><a href="#observatory">Research Map</a><a href="#open-research">Open Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#leadership">Leadership</a><a href="#latest">Latest</a><a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
@@ -101,33 +101,39 @@
     <section id="observatory" class="section section-shell observatory-section">
       <div class="container">
         <div class="section-heading observatory-heading reveal">
-          <p class="section-label">3D Research Observatory</p>
-          <h2>Explore the research programme as a connected scientific system.</h2>
-          <p>Nine open programmes across four research directions. Explore the spatial map, or use the complete project catalogue below.</p>
+          <p class="section-label">Research landscape</p>
+          <h2>Different questions, connected by mathematical structure.</h2>
+          <p>My work spans graph theory, resilient networks, molecular structures and reliable scientific modelling. These areas inform one another, from mathematical foundations to computational evidence.</p>
         </div>
-        <div class="observatory-shell reveal">
-          <div id="research-constellation" class="observatory-stage" tabindex="0" aria-label="Interactive three-dimensional map of nine public research programmes">
-            <div class="observatory-loading" id="observatory-loading">Loading research constellation…</div><div class="observatory-stage-legend" aria-hidden="true"><span><i class="legend-hub"></i> Research direction</span><span><i class="legend-node"></i> Project</span></div>
-            <div class="observatory-tooltip" id="observatory-tooltip" role="status" aria-live="polite"></div>
-          </div>
-          <aside class="observatory-panel" aria-live="polite">
-            <div>
-              <span class="observatory-kicker">Selected programme</span>
-              <h3 id="observatory-title">Operation-Marked Route Spectra</h3><p class="observatory-full-title" id="observatory-full-title">Operation-Marked Eccentricity-Weighted Route Spectra</p>
-              <p id="observatory-pillar">Graph Theory & Formal Methods</p>
-              <p id="observatory-status">Public · Exact proof suites</p><p class="observatory-summary" id="observatory-summary">Exact symbolic separation of operation-labelled route spectra, with four proof-verification suites and carefully bounded exploratory evidence.</p>
+        <div class="observatory-shell reveal" id="research-map">
+          <div class="observatory-stage" id="research-constellation" aria-label="Research map with four areas and nine linked projects">
+            <div class="atlas-topline"><span>Research areas</span><span>Four directions · Nine public projects</span></div>
+            <div id="research-atlas-board" class="atlas-board">
+              <div class="atlas-loading">Preparing research projects…</div>
             </div>
-            <label class="observatory-picker-label" for="observatory-project-picker">Choose a research programme</label><select id="observatory-project-picker" class="observatory-project-picker" aria-label="Select a research programme" hidden></select><a id="observatory-link" class="btn primary observatory-link" href="https://github.com/SunilgarGusai/operation-marked-route-spectra" target="_blank" rel="noopener">Open repository ↗</a>
-            <p class="observatory-help">Interactive map: drag to orbit; select a node, or use the project chooser. The repository cards below remain the complete accessible catalogue.</p>
-          </aside>
-          <div class="observatory-filters" role="group" aria-label="Filter 3D observatory by research direction">
-            <button type="button" class="observatory-filter active" data-pillar="all">All 9 programmes</button>
-            <button type="button" class="observatory-filter" data-pillar="Graph Theory & Formal Methods">λ Graph & Formal</button>
-            <button type="button" class="observatory-filter" data-pillar="Networked Systems & Resilience">⌘ Networks</button>
-            <button type="button" class="observatory-filter" data-pillar="Molecular & Biomolecular Graphs">⬡ Molecular</button>
-            <button type="button" class="observatory-filter" data-pillar="Reliable Scientific AI & Evidence">◎ Reliable AI</button>
+            <div class="atlas-footnote">Select a project to read about its focus and supporting research.</div>
           </div>
-          <noscript><p class="observatory-noscript">The interactive 3D map requires JavaScript. All nine projects remain fully accessible in the Open Research section below.</p></noscript>
+          <aside class="observatory-panel" aria-label="Selected research project" aria-live="polite">
+            <p class="observatory-kicker">Selected research</p>
+            <h3 id="observatory-title">Operation-Marked Route Spectra</h3>
+            <p class="observatory-full-title" id="observatory-full-title">Operation-Marked Eccentricity-Weighted Route Spectra</p>
+            <p id="observatory-pillar">Graph Theory &amp; Formal Methods</p>
+            <p id="observatory-status">Public research</p>
+            <p class="observatory-summary" id="observatory-summary">A mathematical study of operation-labelled graph spectra and exact structural distinctions.</p>
+            <label class="observatory-picker-label" for="observatory-project-picker">Other projects</label>
+            <select id="observatory-project-picker" class="observatory-project-picker" aria-label="Choose another research project">
+              <option value="operation-marked-route-spectra">Operation-Marked Route Spectra</option>
+            </select>
+            <a id="observatory-link" class="btn primary observatory-link" href="https://github.com/SunilgarGusai/operation-marked-route-spectra" target="_blank" rel="noopener">Read about the project ↗</a>
+          </aside>
+          <div class="observatory-filters" role="group" aria-label="Highlight research by subject">
+            <button type="button" class="observatory-filter active" data-pillar="all" aria-pressed="true">All research</button>
+            <button type="button" class="observatory-filter" data-pillar="Graph Theory &amp; Formal Methods" aria-pressed="false">Graph theory</button>
+            <button type="button" class="observatory-filter" data-pillar="Networked Systems &amp; Resilience" aria-pressed="false">Networks</button>
+            <button type="button" class="observatory-filter" data-pillar="Molecular &amp; Biomolecular Graphs" aria-pressed="false">Molecular</button>
+            <button type="button" class="observatory-filter" data-pillar="Reliable Scientific AI &amp; Evidence" aria-pressed="false">Scientific AI</button>
+          </div>
+          <noscript><p class="observatory-noscript">The research project links are also listed in the Open Research section below.</p></noscript>
         </div>
       </div>
     </section>
@@ -215,15 +221,7 @@
   </main>
 
   <footer class="footer"><div class="container footer-grid"><div><strong>Dr. Sunilgar L. Gusai</strong><span>Academic portfolio · Open research hub</span></div><p>© <span id="current-year">2026</span> · Built around transparent, reproducible research.</p><a href="#home">Back to top ↑</a></div></footer>
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
-    }
-  }
-  </script>
-  <script src="script.js"></script>
-  <script type="module" src="research-3d.js"></script>
+<script src="script.js"></script>
+  <script src="research-3d.js?v=20261018b" defer></script>
 </body>
 </html>
