@@ -3,6 +3,9 @@ if (mount) {
   const loading = document.getElementById("observatory-loading");
   const tooltip = document.getElementById("observatory-tooltip");
   const titleEl = document.getElementById("observatory-title");
+  const fullTitleEl = document.getElementById("observatory-full-title");
+  const summaryEl = document.getElementById("observatory-summary");
+  const pickerEl = document.getElementById("observatory-project-picker");
   const pillarEl = document.getElementById("observatory-pillar");
   const statusEl = document.getElementById("observatory-status");
   const linkEl = document.getElementById("observatory-link");
@@ -56,10 +59,10 @@ if (mount) {
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x07101d, 0.035);
 
-    const camera = new THREE.PerspectiveCamera(46, 1, 0.1, 100);
-    camera.position.set(0, 0.5, 15.5);
+    const camera = new THREE.PerspectiveCamera(52, 1, 0.1, 100);
+    camera.position.set(0, 0.2, 14.7);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "low-power" });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 700 ? 1.35 : 1.75));
     renderer.setClearColor(0x07101d, 0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -71,7 +74,7 @@ if (mount) {
     controls.minDistance = 7.5;
     controls.maxDistance = 24;
     controls.enablePan = false;
-    controls.autoRotate = !reducedMotion && window.innerWidth > 900;
+    controls.autoRotate = false;
     controls.autoRotateSpeed = 0.34;
     controls.target.set(0, -0.15, 0);
 
@@ -119,7 +122,7 @@ if (mount) {
         color, emissive: color, emissiveIntensity: .19, metalness: .16, roughness: .28,
         transparent: true, opacity: .96
       });
-      const hub = new THREE.Mesh(new THREE.IcosahedronGeometry(.64, 2), material);
+      const hub = new THREE.Mesh(new THREE.IcosahedronGeometry(.55, 2), material);
       hub.position.copy(position);
       hub.userData = { type:"pillar", pillar };
       group.add(hub);
@@ -127,16 +130,14 @@ if (mount) {
       interactive.push(hub);
 
       const ring = new THREE.Mesh(
-        new THREE.TorusGeometry(.88, .018, 10, 80),
+        new THREE.TorusGeometry(.75, .013, 10, 80),
         new THREE.MeshBasicMaterial({ color, transparent:true, opacity:.5 })
       );
       ring.position.copy(position);
       ring.rotation.x = Math.PI / 2.5;
       group.add(ring);
 
-      const label = makeLabel(pillar.replace(" & Evidence",""), color);
-      label.position.copy(position).add(new THREE.Vector3(0,1.18,0));
-      group.add(label);
+      // Labels are now contextual: hover/focus provides the full research direction.
     });
 
     const hubKeys = Object.keys(hubPositions);
@@ -155,19 +156,21 @@ if (mount) {
       const hub = hubPositions[pillar];
       const color = palette[pillar] ?? 0x7aa7ff;
       items.forEach((project, index) => {
-        const n = items.length;
-        const angle = ((index / Math.max(n,1)) * Math.PI * 2) + (pillar.length % 7) * .13;
-        const radius = n > 2 ? 2.1 : 1.75;
-        const pos = new THREE.Vector3(
-          hub.x + Math.cos(angle) * radius,
-          hub.y + Math.sin(angle) * radius * .72,
-          hub.z + ((index % 3) - 1) * .92
-        );
+        // Clusters occupy four intentional quadrants; no random label collisions.
+        const quadrant = Object.keys(hubPositions).indexOf(pillar);
+        const offsets = [
+          [[-1.35,1.0,-.3],[1.35,1.0,.5],[-.1,1.6,-.4]],
+          [[-1.35,1.0,.5],[1.35,1.0,-.3],[.1,1.6,-.4]],
+          [[-1.35,-1.0,-.3],[1.35,-1.0,.5],[-.1,-1.6,-.4]],
+          [[-1.35,-1.0,.5],[.05,-1.55,-.4],[1.35,-1.0,.3]]
+        ];
+        const shift = offsets[quadrant][index] || [0,0,index * .3];
+        const pos = hub.clone().add(new THREE.Vector3(...shift));
         const material = new THREE.MeshStandardMaterial({
           color, emissive:color, emissiveIntensity:.1, roughness:.35, metalness:.08,
           transparent:true, opacity:.92
         });
-        const mesh = new THREE.Mesh(new THREE.SphereGeometry(.29, 24, 18), material);
+        const mesh = new THREE.Mesh(new THREE.SphereGeometry(.24, 24, 18), material);
         mesh.position.copy(pos);
         mesh.userData = { type:"project", project, pillar, baseScale:1 };
         group.add(mesh);
@@ -175,7 +178,7 @@ if (mount) {
         projectMeshes.push(mesh);
 
         const halo = new THREE.Mesh(
-          new THREE.TorusGeometry(.43,.012,8,54),
+          new THREE.TorusGeometry(.35,.010,8,54),
           new THREE.MeshBasicMaterial({color,transparent:true,opacity:.36})
         );
         halo.position.copy(pos);
@@ -217,11 +220,18 @@ if (mount) {
     }
 
     function describeProject(project) {
-      titleEl.textContent = project.title;
+      titleEl.textContent = project.short_title || project.title;
+      fullTitleEl.textContent = project.title;
+      fullTitleEl.hidden = titleEl.textContent === project.title;
       pillarEl.textContent = project.pillar;
       statusEl.textContent = project.status_label || "Public research programme";
+      const matching = [...document.querySelectorAll(".project-card .project-link")]
+        .find(a => a.getAttribute("href")?.endsWith("/" + project.repository));
+      summaryEl.textContent = matching?.closest(".project-card")?.querySelector(":scope > p")?.textContent
+        || "Explore the evidence, methods, and reproducibility materials.";
       linkEl.href = "https://github.com/SunilgarGusai/" + project.repository;
       linkEl.textContent = "Open repository ↗";
+      pickerEl.value = project.repository;
     }
 
     function resetScale(mesh) {
@@ -261,7 +271,7 @@ if (mount) {
       if (hovered !== next) {
         if (hovered?.userData?.type === "project" && hovered !== selected) resetScale(hovered);
         hovered = next;
-        if (hovered?.userData?.type === "project") hovered.scale.setScalar(1.24);
+        if (hovered?.userData?.type === "project" && hovered !== selected) hovered.scale.setScalar(1.15);
       }
       renderer.domElement.style.cursor = hovered ? "pointer" : "grab";
       if (hovered) {
@@ -282,8 +292,9 @@ if (mount) {
     renderer.domElement.addEventListener("click", event => {
       pointerToNdc(event);
       raycaster.setFromCamera(pointer,camera);
-      const hit = raycaster.intersectObjects(projectMeshes.filter(o=>o.visible),false)[0]?.object;
-      if (hit) setSelected(hit);
+      const hit = raycaster.intersectObjects(interactive.filter(o=>o.visible),false)[0]?.object;
+      if (hit?.userData.type === "project") setSelected(hit);
+      if (hit?.userData.type === "pillar") applyFilter(hit.userData.pillar);
     });
 
     function applyFilter(pillar) {
@@ -313,6 +324,28 @@ if (mount) {
     }
     filterButtons.forEach(btn => btn.addEventListener("click", () => applyFilter(btn.dataset.pillar)));
 
+    for (const mesh of projectMeshes) {
+      const option = document.createElement("option");
+      option.value = mesh.userData.project.repository;
+      option.textContent = mesh.userData.project.short_title || mesh.userData.project.title;
+      pickerEl.append(option);
+    }
+    pickerEl.hidden = false;
+    pickerEl.addEventListener("change", () => {
+      const chosen = projectMeshes.find(m => m.userData.project.repository === pickerEl.value);
+      if (!chosen) return;
+      if (!chosen.visible) applyFilter("all");
+      setSelected(chosen);
+    });
+    mount.addEventListener("keydown", event => {
+      if (event.target !== mount || !["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key)) return;
+      event.preventDefault();
+      const visible = projectMeshes.filter(mesh => mesh.visible);
+      const at = Math.max(0, visible.indexOf(selected));
+      const offset = ["ArrowRight","ArrowDown"].includes(event.key) ? 1 : -1;
+      setSelected(visible[(at + offset + visible.length) % visible.length]);
+    });
+
     const newest = projectMeshes.find(m => m.userData.project.repository === "operation-marked-route-spectra");
     if (newest) {
       selected = newest;
@@ -326,29 +359,54 @@ if (mount) {
       renderer.setSize(width,height,false);
       camera.aspect = width / Math.max(height,1);
       camera.updateProjectionMatrix();
+      renderer.render(scene,camera);
     }
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(mount);
     resize();
 
     let frame = 0;
-    function animate() {
-      frame++;
-      if (!reducedMotion) {
-        group.rotation.y += .0007;
-        stars.rotation.y -= .00012;
-        projectMeshes.forEach((mesh,i) => {
-          if (mesh.visible && mesh !== selected) {
-            const pulse = 1 + Math.sin((frame+i*17)*.018)*.018;
-            mesh.scale.setScalar(mesh === hovered ? 1.24 * pulse : pulse);
-          }
-        });
+    let running = false;
+    let onScreen = false;
+    let previousFrame = 0;
+    const draw = () => renderer.render(scene,camera);
+    controls.addEventListener("change", draw);
+    function animate(timestamp) {
+      if (!running || document.hidden || !onScreen) { running = false; return; }
+      if (timestamp - previousFrame >= (window.innerWidth < 700 ? 34 : 24)) {
+        previousFrame = timestamp;
+        frame++;
+        if (!reducedMotion) {
+          projectMeshes.forEach((mesh,i) => {
+            if (mesh.visible && mesh !== selected) {
+              const pulse = 1 + Math.sin((frame+i*17)*.014)*.018;
+              mesh.scale.setScalar(mesh === hovered ? 1.15 * pulse : pulse);
+            }
+          });
+        }
+        controls.update();
+        draw();
       }
-      controls.update();
-      renderer.render(scene,camera);
-      requestAnimationFrame(animate);
+      if (!reducedMotion) requestAnimationFrame(animate);
+      else running = false;
     }
-    animate();
+    function regulate() {
+      const shouldRun = onScreen && !document.hidden;
+      if (shouldRun && !running) {
+        running = true;
+        previousFrame = 0;
+        requestAnimationFrame(animate);
+      } else if (!shouldRun) {
+        running = false;
+      }
+    }
+    const visibilityWatcher = new IntersectionObserver(entries => {
+      onScreen = entries.some(entry => entry.isIntersecting);
+      regulate();
+    }, {threshold:.05});
+    visibilityWatcher.observe(mount);
+    document.addEventListener("visibilitychange",regulate);
+    draw();
     mount.classList.add("is-ready");
 
     renderer.domElement.addEventListener("webglcontextlost", event => {

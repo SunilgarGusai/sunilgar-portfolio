@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-16.1",
-  "updated_on": "2026-10-16",
+  "identity_version": "2026-10-18.1",
+  "updated_on": "2026-10-18",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
     "primary_title": "Assistant Professor of Mathematics",
@@ -178,11 +178,10 @@
     {
       "id": "cyber-threat-xai",
       "title": "Explainable Machine Learning for Real-Time Cyber Threat Detection: An Intelligent Framework for Adaptive Information Security",
-      "status": "accepted",
+      "status": "published",
       "year": 2026,
-      "venue": "Computer and Decision Making (COMDEM)",
+      "venue": "Computer and Decision Making: An International Journal",
       "manuscript_id": "CDM_121",
-      "decision_date": "30 September 2026",
       "tags": [
         "Explainable ML",
         "Cybersecurity",
@@ -193,12 +192,17 @@
         "portfolio": true,
         "github_profile": true
       },
-      "show_doi": {
-        "cv": false,
-        "portfolio": false,
-        "github_profile": false
-      },
-      "profile_summary_line": "*Computer and Decision Making (COMDEM)* · **Accepted for publication, 30 Sep 2026** · Manuscript **CDM_121**"
+      "profile_summary_line": "**Sunilgar Gusai, Shrikant Telang, R. Balakrishnan, Preetishree Patnaik, P. K. Anjani, Prasanthi Valluri** · *Computer and Decision Making: An International Journal*, **3**(5S), 89–102, 2026",
+      "authors": "Sunilgar Gusai, Shrikant Telang, R. Balakrishnan, Preetishree Patnaik, P. K. Anjani, Prasanthi Valluri",
+      "citation_detail": "3(5S), 89–102, October 2026",
+      "cv_citation_detail": "Vol.~3(5S), pp.~89--102, October 2026",
+      "publication_url": "https://comdem.org/index.php/comdem/article/view/18726",
+      "published_date": "2026-10-03",
+      "show_publication_url": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
     },
     {
       "id": "spectral-radius-eccentricity",

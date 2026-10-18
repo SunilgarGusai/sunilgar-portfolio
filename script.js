@@ -83,49 +83,14 @@
   }, { threshold: [0.22, 0.45, 0.65], rootMargin: '-80px 0px -35% 0px' });
   sections.forEach((section) => sectionObserver.observe(section));
 
-  // Rotating research focus: motion is restrained and text remains accessible.
+  // Stable focus label; avoid perpetual typewriter movement in academic content.
   const heroCopy = document.querySelector('.hero-copy');
   const heroLead = heroCopy?.querySelector('.lead');
-  const focusItems = [
-    'Spectral graph theory & formal graph methods',
-    'Network resilience, power grids & flood roads',
-    'Molecular graphs, QSAR & representation limits',
-    'Protein residue networks & mutation geometry',
-    'Reliable scientific AI under distribution shift',
-    'Claim–evidence consistency & reproducibility'
-  ];
-
   if (heroCopy && heroLead) {
     const focus = document.createElement('div');
     focus.className = 'live-focus';
-    focus.setAttribute('aria-label', 'Research focus');
-    focus.innerHTML = '<span class="live-focus-label">Research pulse</span><strong class="live-focus-value"></strong>';
+    focus.innerHTML = '<span class="live-focus-label">Current focus</span><strong class="live-focus-value">Graph theory · evidence-led computational research</strong>';
     heroCopy.insertBefore(focus, heroLead);
-    const target = focus.querySelector('.live-focus-value');
-
-    if (reduceMotion) {
-      target.textContent = focusItems[0];
-    } else {
-      let itemIndex = 0;
-      let charIndex = 0;
-      let deleting = false;
-      const typeStep = () => {
-        const phrase = focusItems[itemIndex];
-        charIndex += deleting ? -1 : 1;
-        target.textContent = phrase.slice(0, Math.max(0, charIndex));
-        let delay = deleting ? 24 : 42;
-        if (!deleting && charIndex >= phrase.length) {
-          deleting = true;
-          delay = 1750;
-        } else if (deleting && charIndex <= 0) {
-          deleting = false;
-          itemIndex = (itemIndex + 1) % focusItems.length;
-          delay = 380;
-        }
-        window.setTimeout(typeStep, delay);
-      };
-      typeStep();
-    }
   }
 
   // Count-up metrics when the signal bar first enters view.
@@ -312,6 +277,35 @@
       resize();
       draw();
     }, { passive: true });
+  }
+
+  // Restrained whole-site depth: pointer-only, capped at about two degrees.
+  if (finePointer && !reduceMotion) {
+    document.querySelectorAll('.pillar, .project-card, .glass-panel, .service-grid article, .grant-card, .contact-card')
+      .forEach((surface) => {
+        surface.classList.add('spatial-surface');
+        let scheduled = false;
+        let point = null;
+        surface.addEventListener('pointermove', (event) => {
+          point = {x:event.clientX,y:event.clientY};
+          if (scheduled) return;
+          scheduled = true;
+          requestAnimationFrame(() => {
+            scheduled = false;
+            if (!point) return;
+            const r = surface.getBoundingClientRect();
+            const x = (point.x - r.left)/r.width - .5;
+            const y = (point.y - r.top)/r.height - .5;
+            surface.style.setProperty('--ry', (x*4).toFixed(2));
+            surface.style.setProperty('--rx', (-y*4).toFixed(2));
+          });
+        }, {passive:true});
+        surface.addEventListener('pointerleave', () => {
+          point = null;
+          surface.style.setProperty('--rx','0');
+          surface.style.setProperty('--ry','0');
+        });
+      });
   }
 
   if (year) year.textContent = String(new Date().getFullYear());
