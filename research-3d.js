@@ -358,29 +358,54 @@ if (mount) {
       renderer.setSize(width,height,false);
       camera.aspect = width / Math.max(height,1);
       camera.updateProjectionMatrix();
+      renderer.render(scene,camera);
     }
     const resizeObserver = new ResizeObserver(resize);
     resizeObserver.observe(mount);
     resize();
 
     let frame = 0;
-    function animate() {
-      frame++;
-      if (!reducedMotion) {
-        group.rotation.y += .0007;
-        stars.rotation.y -= .00012;
-        projectMeshes.forEach((mesh,i) => {
-          if (mesh.visible && mesh !== selected) {
-            const pulse = 1 + Math.sin((frame+i*17)*.018)*.018;
-            mesh.scale.setScalar(mesh === hovered ? 1.24 * pulse : pulse);
-          }
-        });
+    let running = false;
+    let onScreen = false;
+    let previousFrame = 0;
+    const draw = () => renderer.render(scene,camera);
+    controls.addEventListener("change", draw);
+    function animate(timestamp) {
+      if (!running || document.hidden || !onScreen) { running = false; return; }
+      if (timestamp - previousFrame >= (window.innerWidth < 700 ? 34 : 24)) {
+        previousFrame = timestamp;
+        frame++;
+        if (!reducedMotion) {
+          projectMeshes.forEach((mesh,i) => {
+            if (mesh.visible && mesh !== selected) {
+              const pulse = 1 + Math.sin((frame+i*17)*.014)*.018;
+              mesh.scale.setScalar(mesh === hovered ? 1.15 * pulse : pulse);
+            }
+          });
+        }
+        controls.update();
+        draw();
       }
-      controls.update();
-      renderer.render(scene,camera);
-      requestAnimationFrame(animate);
+      if (!reducedMotion) requestAnimationFrame(animate);
+      else running = false;
     }
-    animate();
+    function regulate() {
+      const shouldRun = onScreen && !document.hidden;
+      if (shouldRun && !running) {
+        running = true;
+        previousFrame = 0;
+        requestAnimationFrame(animate);
+      } else if (!shouldRun) {
+        running = false;
+      }
+    }
+    const visibilityWatcher = new IntersectionObserver(entries => {
+      onScreen = entries.some(entry => entry.isIntersecting);
+      regulate();
+    }, {threshold:.05});
+    visibilityWatcher.observe(mount);
+    document.addEventListener("visibilitychange",regulate);
+    draw();
     mount.classList.add("is-ready");
 
     renderer.domElement.addEventListener("webglcontextlost", event => {
