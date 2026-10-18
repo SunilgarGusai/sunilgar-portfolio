@@ -110,7 +110,7 @@
           if (active !== "all" && active !== name) filter("all");
           choose(project);
         });
-        const arrow = element("span", "atlas-project-arrow", "↗");
+        const arrow = element("span", "atlas-project-arrow", "›");
         arrow.setAttribute("aria-hidden", "true");
         choice.append(arrow);
         links.append(choice);
