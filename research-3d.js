@@ -271,7 +271,7 @@ if (mount) {
       if (hovered !== next) {
         if (hovered?.userData?.type === "project" && hovered !== selected) resetScale(hovered);
         hovered = next;
-        if (hovered?.userData?.type === "project") hovered.scale.setScalar(1.24);
+        if (hovered?.userData?.type === "project" && hovered !== selected) hovered.scale.setScalar(1.15);
       }
       renderer.domElement.style.cursor = hovered ? "pointer" : "grab";
       if (hovered) {
@@ -292,8 +292,9 @@ if (mount) {
     renderer.domElement.addEventListener("click", event => {
       pointerToNdc(event);
       raycaster.setFromCamera(pointer,camera);
-      const hit = raycaster.intersectObjects(projectMeshes.filter(o=>o.visible),false)[0]?.object;
-      if (hit) setSelected(hit);
+      const hit = raycaster.intersectObjects(interactive.filter(o=>o.visible),false)[0]?.object;
+      if (hit?.userData.type === "project") setSelected(hit);
+      if (hit?.userData.type === "pillar") applyFilter(hit.userData.pillar);
     });
 
     function applyFilter(pillar) {
