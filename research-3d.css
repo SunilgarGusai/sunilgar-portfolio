@@ -113,3 +113,29 @@
 .reveal.visible .section-label{animation:none!important}
 
 #observatory{scroll-margin-top:106px}
+
+/* Research portfolio V5: animated scientific cover gallery */
+.open-research-section .project-card{display:flex;flex-direction:column;min-height:0;padding:20px 23px 26px}
+.project-cover-link{position:relative;display:block;overflow:hidden;isolation:isolate;flex:none;margin:-1px 0 22px;border:1px solid rgba(200,219,246,.13);border-radius:17px;background:#09182a;aspect-ratio:560/250;outline-offset:3px}
+.project-cover-link picture{display:block;width:100%;height:100%}
+.project-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1);transition:transform .5s cubic-bezier(.2,.7,.2,1),filter .3s ease}
+.project-cover-link:after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.project-cover-link:hover .project-cover,.project-cover-link:focus-visible .project-cover{transform:scale(1.027);filter:saturate(1.09)}
+.project-card .project-meta{align-items:start}
+.project-card .project-cover-link+.project-meta{min-height:35px}
+.project-card h3{margin-top:18px}
+.newest-programme-group .project-card{max-width:none}
+.newest-programme-group .project-cover-link{width:100%;max-height:330px;aspect-ratio:560/190}
+.newest-programme-group .project-cover{object-fit:cover}
+.project-card>.mini-metrics{margin:17px 0 6px}
+.project-card>ul{margin:14px 0 19px}
+.project-card>.project-link{margin-top:auto}
+@media(max-width:640px){
+ .open-research-section .project-card{padding:15px 15px 23px}
+ .project-cover-link{margin-bottom:19px;border-radius:12px}
+ .newest-programme-group .project-cover-link{aspect-ratio:560/250;max-height:none}
+ .project-card h3{margin-top:15px}
+}
+@media(prefers-reduced-motion:reduce){
+ .project-cover{transition:none!important;transform:none!important}
+}
