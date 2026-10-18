@@ -28,3 +28,58 @@
 @media(max-width:900px){.observatory-shell{grid-template-columns:1fr;grid-template-rows:500px auto auto}.observatory-stage{min-height:500px}.observatory-panel{min-height:auto}.observatory-panel h3{font-size:22px}.observatory-link{width:auto;align-self:flex-start}}
 @media(max-width:570px){.observatory-shell{grid-template-rows:430px auto auto;padding:10px;border-radius:22px}.observatory-stage{min-height:430px;border-radius:16px}.observatory-panel{padding:22px;border-radius:16px}.observatory-filters{gap:6px}.observatory-filter{flex:1 1 46%;text-align:center}.project-wide{min-height:auto}}
 @media(prefers-reduced-motion:reduce){.observatory-filter{transition:none}.observatory-filter:hover{transform:none}}
+
+/* V4.1: clearer hierarchy and restrained spatial depth */
+.observatory-shell{grid-template-columns:minmax(0,1.7fr) minmax(280px,.6fr)}
+.observatory-stage{background:radial-gradient(ellipse at 50% 50%,rgba(62,100,181,.14),transparent 59%),linear-gradient(155deg,#07111f,#0c1930)}
+.observatory-stage-legend{position:absolute;z-index:2;left:18px;bottom:17px;display:flex;flex-wrap:wrap;gap:16px;color:#91a8c8;font-size:10px;pointer-events:none}
+.observatory-stage-legend span{display:inline-flex;align-items:center;gap:7px}
+.observatory-stage-legend i{display:inline-block;border:1px solid #8db3eb;background:#3c73c9;border-radius:50%}
+.legend-hub{width:12px;height:12px}.legend-node{width:6px;height:6px}
+.observatory-panel{justify-content:flex-start;gap:15px;padding:27px}
+.observatory-panel h3{font-size:clamp(21px,1.7vw,26px);line-height:1.24;overflow-wrap:break-word;margin-bottom:9px}
+.observatory-full-title{margin-bottom:14px!important;font-size:11px!important;color:#859dbc!important;line-height:1.6}
+.observatory-full-title[hidden]{display:none!important}
+.observatory-summary{color:#bdcbe0!important;line-height:1.7!important;font-size:12px!important;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden}
+.observatory-picker-label{margin-top:10px;color:#92b8ee;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.observatory-project-picker{width:100%;min-height:42px;padding:9px 12px;border:1px solid rgba(150,184,235,.27);border-radius:11px;background:#172945;color:#edf5ff;font:600 12px var(--font-body)}
+.observatory-project-picker:focus-visible{outline:2px solid #91bdff;outline-offset:2px}
+.observatory-project-picker[hidden]{display:none}
+.observatory-link{margin-top:9px}
+.observatory-help{margin-top:auto!important;font-size:10px!important;line-height:1.6}
+.observatory-kicker{margin-bottom:12px}
+.observatory-tooltip{max-width:290px;line-height:1.45}
+.observatory-stage canvas{cursor:grab}
+.observatory-stage:active canvas{cursor:grabbing}
+.project-wide{min-height:325px}
+.project-card{min-height:385px}
+.project-card ul{margin:12px 0 18px}
+.newest-programme-group .project-card{min-height:345px}
+.timeline a{color:var(--blue);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){
+  .observatory-shell{grid-template-columns:1fr}
+  .observatory-panel{min-height:auto}
+  .observatory-help{margin-top:10px!important}
+}
+@media(max-width:570px){
+  .observatory-panel{padding:22px}
+  .observatory-stage-legend{bottom:12px;left:12px;gap:12px;font-size:9px}
+  .observatory-shell{grid-template-rows:390px auto auto}
+  .observatory-stage{min-height:390px}
+}
+/* Site-wide spatial UI: shallow 3D, no spinning surfaces or neon cursor. */
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  .spatial-surface{--rx:0;--ry:0;transition:transform .24s ease,box-shadow .28s ease,border-color .28s ease;transform-style:preserve-3d}
+  .spatial-surface:hover{transform:perspective(1200px) translateY(-4px) rotateX(calc(var(--rx)*1deg)) rotateY(calc(var(--ry)*1deg));box-shadow:0 23px 65px rgba(15,35,80,.15)}
+  .open-research-section .spatial-surface:hover{box-shadow:0 28px 70px rgba(0,0,0,.24)}
+  .publication-item{transition:background .22s ease,transform .22s ease}
+  .publication-item:hover{background:color-mix(in srgb,var(--blue) 4%,transparent)}
+}
+/* Avoid multiple competing animations: clear content takes priority. */
+.btn.primary::before{animation:none!important;display:none}
+.floating-chip,.status-dot,.ambient-one,.ambient-two{animation:none!important}
+.live-focus-value::after{animation:none!important;display:none}
+.reveal.visible .section-label{animation:none!important}
+@media(prefers-reduced-motion:reduce){
+  .spatial-surface,.spatial-surface:hover{transform:none!important;transition:none!important}
+}
