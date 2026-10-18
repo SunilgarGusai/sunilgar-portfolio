@@ -134,9 +134,7 @@ if (mount) {
       ring.rotation.x = Math.PI / 2.5;
       group.add(ring);
 
-      const label = makeLabel(pillar.replace(" & Evidence",""), color);
-      label.position.copy(position).add(new THREE.Vector3(0,1.18,0));
-      group.add(label);
+      // Labels are now contextual: hover/focus provides the full research direction.
     });
 
     const hubKeys = Object.keys(hubPositions);
