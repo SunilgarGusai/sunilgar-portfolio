@@ -188,10 +188,9 @@ def render_portfolio_publications(data: dict) -> str:
     inner = "\n\n".join(articles)
     return (
         '<section id="publications" class="section section-shell"><div class="container">'
-        '<div class="section-heading reveal"><p class="section-label">Published & Accepted Scholarship</p>'
-        '<h2>Research that has crossed an editorial milestone.</h2>'
-        '<p>Published records are linked where a stable DOI or publication page is available. '
-        'Accepted work is labelled separately until a public publication record is verifiable.</p>'
+        '<div class="section-heading reveal"><p class="section-label">Published research</p>'
+        '<h2>Selected journal publications.</h2>'
+        '<p>Verified publisher records are linked by DOI or stable article page.</p>'
         '</div><div class="publication-list reveal">\n\n'
         f"{inner}\n"
         "  </div></div></section>"
