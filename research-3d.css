@@ -111,3 +111,5 @@
 .btn.primary::before{animation:none!important;display:none}
 .floating-chip,.ambient-one,.ambient-two{animation:none!important}
 .reveal.visible .section-label{animation:none!important}
+
+#observatory{scroll-margin-top:106px}
