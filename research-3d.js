@@ -3,6 +3,9 @@ if (mount) {
   const loading = document.getElementById("observatory-loading");
   const tooltip = document.getElementById("observatory-tooltip");
   const titleEl = document.getElementById("observatory-title");
+  const fullTitleEl = document.getElementById("observatory-full-title");
+  const summaryEl = document.getElementById("observatory-summary");
+  const pickerEl = document.getElementById("observatory-project-picker");
   const pillarEl = document.getElementById("observatory-pillar");
   const statusEl = document.getElementById("observatory-status");
   const linkEl = document.getElementById("observatory-link");
@@ -217,11 +220,18 @@ if (mount) {
     }
 
     function describeProject(project) {
-      titleEl.textContent = project.title;
+      titleEl.textContent = project.short_title || project.title;
+      fullTitleEl.textContent = project.title;
+      fullTitleEl.hidden = titleEl.textContent === project.title;
       pillarEl.textContent = project.pillar;
       statusEl.textContent = project.status_label || "Public research programme";
+      const matching = [...document.querySelectorAll(".project-card .project-link")]
+        .find(a => a.getAttribute("href")?.endsWith("/" + project.repository));
+      summaryEl.textContent = matching?.closest(".project-card")?.querySelector(":scope > p")?.textContent
+        || "Explore the evidence, methods, and reproducibility materials.";
       linkEl.href = "https://github.com/SunilgarGusai/" + project.repository;
       linkEl.textContent = "Open repository ↗";
+      pickerEl.value = project.repository;
     }
 
     function resetScale(mesh) {
@@ -312,6 +322,28 @@ if (mount) {
       }
     }
     filterButtons.forEach(btn => btn.addEventListener("click", () => applyFilter(btn.dataset.pillar)));
+
+    for (const mesh of projectMeshes) {
+      const option = document.createElement("option");
+      option.value = mesh.userData.project.repository;
+      option.textContent = mesh.userData.project.short_title || mesh.userData.project.title;
+      pickerEl.append(option);
+    }
+    pickerEl.hidden = false;
+    pickerEl.addEventListener("change", () => {
+      const chosen = projectMeshes.find(m => m.userData.project.repository === pickerEl.value);
+      if (!chosen) return;
+      if (!chosen.visible) applyFilter("all");
+      setSelected(chosen);
+    });
+    mount.addEventListener("keydown", event => {
+      if (event.target !== mount || !["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(event.key)) return;
+      event.preventDefault();
+      const visible = projectMeshes.filter(mesh => mesh.visible);
+      const at = Math.max(0, visible.indexOf(selected));
+      const offset = ["ArrowRight","ArrowDown"].includes(event.key) ? 1 : -1;
+      setSelected(visible[(at + offset + visible.length) % visible.length]);
+    });
 
     const newest = projectMeshes.find(m => m.userData.project.repository === "operation-marked-route-spectra");
     if (newest) {
