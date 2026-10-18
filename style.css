@@ -49,3 +49,9 @@ html[data-theme="dark"]{--bg:#07101d;--surface:rgba(14,28,48,.82);--surface-soli
 
 @media(max-width:1050px){.nav-links{gap:14px;font-size:12px}}
 @media(max-width:650px){.project-group-heading{align-items:flex-start;flex-direction:column;gap:3px}.research-filters{gap:7px}.research-filter{padding:8px 10px;font-size:10px}}
+
+/* Research pillar icon contrast fix: the base rule sets white text, so currentColor would produce white-on-white icons. */
+.pillar-blue .pillar-icon{background-color:#2563eb}
+.pillar-cyan .pillar-icon{background-color:#0e7490}
+.pillar-violet .pillar-icon{background-color:#7c3aed}
+.pillar-amber .pillar-icon{background-color:#b45309}
