@@ -56,10 +56,10 @@ if (mount) {
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x07101d, 0.035);
 
-    const camera = new THREE.PerspectiveCamera(46, 1, 0.1, 100);
-    camera.position.set(0, 0.5, 15.5);
+    const camera = new THREE.PerspectiveCamera(52, 1, 0.1, 100);
+    camera.position.set(0, 0.2, 14.7);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "high-performance" });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: "low-power" });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, window.innerWidth < 700 ? 1.35 : 1.75));
     renderer.setClearColor(0x07101d, 0);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -71,7 +71,7 @@ if (mount) {
     controls.minDistance = 7.5;
     controls.maxDistance = 24;
     controls.enablePan = false;
-    controls.autoRotate = !reducedMotion && window.innerWidth > 900;
+    controls.autoRotate = false;
     controls.autoRotateSpeed = 0.34;
     controls.target.set(0, -0.15, 0);
 
@@ -119,7 +119,7 @@ if (mount) {
         color, emissive: color, emissiveIntensity: .19, metalness: .16, roughness: .28,
         transparent: true, opacity: .96
       });
-      const hub = new THREE.Mesh(new THREE.IcosahedronGeometry(.64, 2), material);
+      const hub = new THREE.Mesh(new THREE.IcosahedronGeometry(.55, 2), material);
       hub.position.copy(position);
       hub.userData = { type:"pillar", pillar };
       group.add(hub);
@@ -127,7 +127,7 @@ if (mount) {
       interactive.push(hub);
 
       const ring = new THREE.Mesh(
-        new THREE.TorusGeometry(.88, .018, 10, 80),
+        new THREE.TorusGeometry(.75, .013, 10, 80),
         new THREE.MeshBasicMaterial({ color, transparent:true, opacity:.5 })
       );
       ring.position.copy(position);
@@ -153,19 +153,21 @@ if (mount) {
       const hub = hubPositions[pillar];
       const color = palette[pillar] ?? 0x7aa7ff;
       items.forEach((project, index) => {
-        const n = items.length;
-        const angle = ((index / Math.max(n,1)) * Math.PI * 2) + (pillar.length % 7) * .13;
-        const radius = n > 2 ? 2.1 : 1.75;
-        const pos = new THREE.Vector3(
-          hub.x + Math.cos(angle) * radius,
-          hub.y + Math.sin(angle) * radius * .72,
-          hub.z + ((index % 3) - 1) * .92
-        );
+        // Clusters occupy four intentional quadrants; no random label collisions.
+        const quadrant = Object.keys(hubPositions).indexOf(pillar);
+        const offsets = [
+          [[-1.35,1.0,-.3],[1.35,1.0,.5],[-.1,1.6,-.4]],
+          [[-1.35,1.0,.5],[1.35,1.0,-.3],[.1,1.6,-.4]],
+          [[-1.35,-1.0,-.3],[1.35,-1.0,.5],[-.1,-1.6,-.4]],
+          [[-1.35,-1.0,.5],[.05,-1.55,-.4],[1.35,-1.0,.3]]
+        ];
+        const shift = offsets[quadrant][index] || [0,0,index * .3];
+        const pos = hub.clone().add(new THREE.Vector3(...shift));
         const material = new THREE.MeshStandardMaterial({
           color, emissive:color, emissiveIntensity:.1, roughness:.35, metalness:.08,
           transparent:true, opacity:.92
         });
-        const mesh = new THREE.Mesh(new THREE.SphereGeometry(.29, 24, 18), material);
+        const mesh = new THREE.Mesh(new THREE.SphereGeometry(.24, 24, 18), material);
         mesh.position.copy(pos);
         mesh.userData = { type:"project", project, pillar, baseScale:1 };
         group.add(mesh);
@@ -173,7 +175,7 @@ if (mount) {
         projectMeshes.push(mesh);
 
         const halo = new THREE.Mesh(
-          new THREE.TorusGeometry(.43,.012,8,54),
+          new THREE.TorusGeometry(.35,.010,8,54),
           new THREE.MeshBasicMaterial({color,transparent:true,opacity:.36})
         );
         halo.position.copy(pos);
