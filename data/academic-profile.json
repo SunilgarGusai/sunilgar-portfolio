@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-18.1",
-  "updated_on": "2026-10-18",
+  "identity_version": "2026-10-26.1",
+  "updated_on": "2026-10-26",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
     "primary_title": "Assistant Professor of Mathematics",
@@ -185,14 +185,15 @@
       "tags": [
         "Explainable ML",
         "Cybersecurity",
-        "Adaptive Detection"
+        "Adaptive Detection",
+        "Scopus indexed"
       ],
       "visibility": {
         "cv": true,
         "portfolio": true,
         "github_profile": true
       },
-      "profile_summary_line": "**Sunilgar Gusai, Shrikant Telang, R. Balakrishnan, Preetishree Patnaik, P. K. Anjani, Prasanthi Valluri** · *Computer and Decision Making: An International Journal*, **3**(5S), 89–102, 2026",
+      "profile_summary_line": "**Sunilgar Gusai, Shrikant Telang, R. Balakrishnan, Preetishree Patnaik, P. K. Anjani, Prasanthi Valluri** · *Computer and Decision Making: An International Journal*, **3**(5S), 89–102, 2026 · Scopus indexed",
       "authors": "Sunilgar Gusai, Shrikant Telang, R. Balakrishnan, Preetishree Patnaik, P. K. Anjani, Prasanthi Valluri",
       "citation_detail": "3(5S), 89–102, October 2026",
       "cv_citation_detail": "Vol.~3(5S), pp.~89--102, October 2026",
@@ -202,6 +203,19 @@
         "cv": true,
         "portfolio": true,
         "github_profile": true
+      },
+      "doi": "10.1922/comdem.v3i5S.18726",
+      "doi_evidence": "author supplied 2026-10-26; DOI resolution not independently confirmed",
+      "show_doi": {
+        "cv": false,
+        "portfolio": false,
+        "github_profile": false
+      },
+      "scopus_indexing": {
+        "status": "author_confirmed",
+        "author_confirmation_date": "2026-10-26",
+        "journal_source_verified": true,
+        "article_scopus_eid": null
       }
     },
     {
