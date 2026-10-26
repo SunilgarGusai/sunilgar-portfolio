@@ -163,20 +163,25 @@ def render_portfolio_publications(data: dict) -> str:
             venue = html.escape(item["venue"])
             detail = html.escape(item.get("citation_detail", ""))
             p = f"<p>{authors_html}. <em>{venue}</em>, {detail}.</p>"
-            action = ""
+            action_links = []
             if item.get("doi") and item.get("show_doi", {}).get("portfolio", True):
-                action_url = "https://doi.org/" + item["doi"]
-                action = (
-                    '<div class="publication-actions">'
-                    f'<a href="{html.escape(action_url)}" target="_blank" rel="noopener">DOI ↗</a>'
-                    "</div>"
+                doi_url = "https://doi.org/" + item["doi"]
+                action_links.append(
+                    f'<a href="{html.escape(doi_url)}" target="_blank" rel="noopener">DOI ↗</a>'
                 )
             elif item.get("publication_url") and item.get("show_publication_url", {}).get("portfolio", True):
-                action = (
-                    '<div class="publication-actions">'
+                action_links.append(
                     f'<a href="{html.escape(item["publication_url"])}" target="_blank" rel="noopener">Article ↗</a>'
-                    "</div>"
                 )
+            if item.get("scopus_eid"):
+                scopus_url = "https://www.scopus.com/record/display.uri?eid=" + item["scopus_eid"]
+                action_links.append(
+                    f'<a href="{html.escape(scopus_url)}" target="_blank" rel="noopener">Scopus ↗</a>'
+                )
+            action = (
+                '<div class="publication-actions">' + "".join(action_links) + "</div>"
+                if action_links else ""
+            )
             article = (
                 '<article class="publication-item">'
                 f'<div class="pub-year">{item["year"]}</div>'
@@ -258,6 +263,11 @@ def render_cv_publications(data: dict) -> str:
                         if item.get("publication_url") and item.get("show_publication_url", {}).get("cv", True)
                         else ""
                     )
+                )
+                + (
+                    rf" Scopus EID: {latex_escape(item['scopus_eid'])}."
+                    if item.get("scopus_eid")
+                    else ""
                 ),
                 "",
             ]
