@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-26.1",
+  "identity_version": "2026-10-26.2",
   "updated_on": "2026-10-26",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
@@ -205,18 +205,19 @@
         "github_profile": true
       },
       "doi": "10.1922/comdem.v3i5S.18726",
-      "doi_evidence": "author supplied 2026-10-26; DOI resolution not independently confirmed",
+      "doi_evidence": "Confirmed in author-provided screenshot of Scopus bibliographic details, 2026-10-26",
       "show_doi": {
-        "cv": false,
-        "portfolio": false,
-        "github_profile": false
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
       },
       "scopus_indexing": {
-        "status": "author_confirmed",
-        "author_confirmation_date": "2026-10-26",
-        "journal_source_verified": true,
-        "article_scopus_eid": null
-      }
+        "status": "article_record_verified",
+        "verification_source": "Author-provided screenshot of Scopus document details",
+        "verification_date": "2026-10-26",
+        "article_scopus_eid": "2-s2.0-105053835294"
+      },
+      "scopus_eid": "2-s2.0-105053835294"
     },
     {
       "id": "spectral-radius-eccentricity",
@@ -239,8 +240,8 @@
       "cv_citation_detail": "Vol.~15(1), pp.~681--686, January 2026",
       "show_doi": {
         "cv": true,
-        "portfolio": false,
-        "github_profile": false
+        "portfolio": true,
+        "github_profile": true
       },
       "profile_summary_line": "**Sunilgar L. Gusai** · *International Journal of Science and Research*, **15**, 681–686, 2026"
     },
