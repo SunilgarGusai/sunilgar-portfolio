@@ -4,6 +4,7 @@ import argparse
 import html
 import json
 import re
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +14,7 @@ CV_PUBLICATIONS = ROOT / "cv" / "publications.tex"
 CV_EXPERIENCE = ROOT / "cv" / "experience.tex"
 CV_RESPONSIBILITIES = ROOT / "cv" / "responsibilities.tex"
 CV_OPEN_RESEARCH = ROOT / "cv" / "open_research.tex"
+CV_PROFESSIONAL_MEMBERSHIPS = ROOT / "cv" / "professional_body.tex"
 
 PORTFOLIO_PUB_START = "<!-- ACADEMIC_SYNC:PORTFOLIO_PUBLICATIONS:START -->"
 PORTFOLIO_PUB_END = "<!-- ACADEMIC_SYNC:PORTFOLIO_PUBLICATIONS:END -->"
@@ -59,6 +61,20 @@ def validate(data: dict) -> list[str]:
             errors.append(
                 f"{item_id}: only published/accepted scholarship may auto-render on portfolio/profile"
             )
+
+    membership_seen = set()
+    for membership in data.get("professional_memberships", []):
+        ident = membership.get("id")
+        if not ident or ident in membership_seen:
+            errors.append(f"Invalid or duplicate professional membership id: {ident}")
+        membership_seen.add(ident)
+        for field in ("organization", "acronym", "designation", "period"):
+            if not membership.get(field):
+                errors.append(f"{ident}: missing {field}")
+        vis = membership.get("visibility", {})
+        for surface in SURFACES:
+            if not isinstance(vis.get(surface), bool):
+                errors.append(f"{ident}: visibility.{surface} must be boolean")
 
     role_seen = set()
     for role in data.get("roles", []):
@@ -219,12 +235,56 @@ def render_portfolio_leadership(data: dict) -> str:
         f'<article><span>{len(cards)+1:02d}</span><h3>{html.escape(tail["title"])}</h3>'
         f'<p>{html.escape(tail["copy"])}</p></article>'
     )
+    memberships = [
+        f'<span>{html.escape(m["organization"])} ({html.escape(m["acronym"])}) — '
+        f'{html.escape(m["designation"])}</span>'
+        for m in data.get("professional_memberships", [])
+        if m.get("visibility", {}).get("portfolio")
+    ]
+    membership_line = (
+        '<div class="professional-memberships reveal"><strong>Professional memberships</strong>'
+        + "".join(memberships) + "</div>"
+        if memberships else ""
+    )
     return (
         '<section id="leadership" class="section section-shell soft-section"><div class="container">'
         '<div class="section-heading reveal"><p class="section-label">Academic Leadership & Service</p>'
         '<h2>Research, teaching and institutional contribution.</h2></div>'
-        f'<div class="service-grid reveal">{"".join(cards)}</div></div></section>'
+        f'<div class="service-grid reveal">{"".join(cards)}</div>{membership_line}</div></section>'
     )
+
+
+def render_cv_professional_memberships(data: dict) -> str:
+    """Generate the professional-memberships CV rubric from the canonical record."""
+    lines = [r"\begin{rubric}{Professional Memberships}", ""]
+    for item in data.get("professional_memberships", []):
+        if not item.get("visibility", {}).get("cv"):
+            continue
+        name = latex_escape(item["organization"])
+        acronym = latex_escape(item["acronym"])
+        designation = latex_escape(item["designation"])
+        number = item.get("membership_number")
+        since = item.get("since")
+        details = designation
+        qualifiers = []
+        if number:
+            qualifiers.append("Membership No.: " + latex_escape(str(number)))
+        if since:
+            qualifiers.append(
+                "since " + date.fromisoformat(since).strftime("%d %B %Y").lstrip("0")
+            )
+        if qualifiers:
+            details += " (" + "; ".join(qualifiers) + ")"
+        lines.extend([
+            rf"\entry*[{item['period']}]%",
+            rf"\textbf{{{name} ({acronym})}}.\par",
+            details + "."
+            + (rf"\par Area: {latex_escape(item['research_areas'])}."
+               if item.get("research_areas") else ""),
+            "",
+        ])
+    lines.extend([r"\end{rubric}", ""])
+    return "\n".join(lines)
 
 
 def render_cv_publications(data: dict) -> str:
@@ -390,6 +450,7 @@ def sync_files(data: dict) -> list[Path]:
         CV_EXPERIENCE: render_cv_experience(data),
         CV_RESPONSIBILITIES: render_cv_responsibilities(data),
         CV_OPEN_RESEARCH: render_cv_open_research(data),
+        CV_PROFESSIONAL_MEMBERSHIPS: render_cv_professional_memberships(data),
     }
     for path, content in generated.items():
         old = path.read_text(encoding="utf-8") if path.exists() else ""
