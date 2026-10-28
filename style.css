@@ -59,3 +59,8 @@ html[data-theme="dark"]{--bg:#07101d;--surface:rgba(14,28,48,.82);--surface-soli
 /* Approved SG orbital monogram: high-density transparent image, real name remains accessible text. */
 .brand .brand-mark-image{display:block;width:48px;height:48px;flex:none;object-fit:contain;border-radius:0;background:none;box-shadow:none}
 @media(max-width:570px){.brand .brand-mark-image{width:44px;height:44px}}
+
+/* Understated, responsive memberships within academic leadership. */
+.professional-memberships{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;margin-top:22px;padding:16px 20px;border:1px solid var(--line);border-radius:16px;background:var(--surface);color:var(--muted);font-size:13px}
+.professional-memberships strong{color:var(--text);font-size:13px}
+.professional-memberships span{line-height:1.55}
