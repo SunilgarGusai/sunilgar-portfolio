@@ -56,6 +56,11 @@ Sunilgar Gusai, Vinodray Kaneria, Manoharsinh Jadeja
 
 ---
 
+## Professional memberships
+
+- **Association for Computing Machinery (ACM)** — Professional Member (2026–present).
+- **International Association of Engineers (IAENG)** — Member (since 28 October 2026).
+
 ## Academic leadership
 
 **Program Head, Data Science Programs** · **Area Chair — Advanced Computing** · **Assistant Professor of Mathematics**
