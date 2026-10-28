@@ -44,18 +44,18 @@ jobs:
 
       - name: Show generated changes on pull requests
         if: github.event_name == 'pull_request'
-        run: git diff --stat && git diff -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex || true
+        run: git diff --stat && git diff -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex cv/professional_body.tex || true
 
       - name: Commit synchronized surfaces on main
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         shell: bash
         run: |
-          if git diff --quiet -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex; then
+          if git diff --quiet -- index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex cv/professional_body.tex; then
             echo "Academic identity surfaces are already synchronized."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex
+          git add index.html cv/publications.tex cv/experience.tex cv/responsibilities.tex cv/open_research.tex cv/professional_body.tex
           git commit -m "chore: sync academic identity surfaces"
           git push
