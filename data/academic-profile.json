@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "identity_version": "2026-10-26.2",
-  "updated_on": "2026-10-26",
+  "identity_version": "2026-10-28.1",
+  "updated_on": "2026-10-28",
   "public_identity": {
     "name": "Dr. Sunilgar L. Gusai",
     "primary_title": "Assistant Professor of Mathematics",
@@ -630,5 +630,38 @@
   "portfolio_service_card_tail": {
     "title": "Academic Coordination",
     "copy": "Timetable operations, examinations, documentation, industrial exposure, student activities, committees and institutional quality processes."
-  }
+  },
+  "professional_memberships": [
+    {
+      "id": "acm",
+      "organization": "Association for Computing Machinery",
+      "acronym": "ACM",
+      "designation": "Professional Member",
+      "period": "2026 -- Present",
+      "membership_number": "0298229",
+      "research_areas": "Graph Theory, Network Science, Artificial Intelligence",
+      "website": "https://www.acm.org/",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    },
+    {
+      "id": "iaeng",
+      "organization": "International Association of Engineers",
+      "acronym": "IAENG",
+      "designation": "Member",
+      "period": "2026 -- Present",
+      "since": "2026-10-28",
+      "membership_number": "587310",
+      "website": "https://www.iaeng.org/",
+      "evidence": "Official IAENG acceptance email and membership letter dated 28 October 2026; membership is ongoing, no renewal required",
+      "visibility": {
+        "cv": true,
+        "portfolio": true,
+        "github_profile": true
+      }
+    }
+  ]
 }
