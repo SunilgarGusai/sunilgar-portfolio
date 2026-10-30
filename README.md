@@ -17,7 +17,10 @@ The public research programme is organised around four connected directions:
 3. **Molecular & Biomolecular Graphs** — QSAR, representation degeneracy, residue-contact networks, mutation geometry and protein stability.
 4. **Reliable Scientific AI & Evidence** — distribution shift, calibration, conformal prediction, scientific-rule gating, evidence consistency and reproducible decision analysis.
 
-## Eight public research programmes
+## Nine public research programmes
+
+### Newest public programme
+- [Operation-Marked Eccentricity-Weighted Route Spectra](https://github.com/SunilgarGusai/operation-marked-route-spectra)
 
 ### Current frontier
 - [Mutation Geodesic Shielding for Protein Stability](https://github.com/SunilgarGusai/mutation-geodesic-shielding-protein-stability)
@@ -30,6 +33,11 @@ The public research programme is organised around four connected directions:
 - [EGFR Graph QSAR — Representation Limits](https://github.com/SunilgarGusai/EGFR-Graph-QSAR-Reproducibility)
 - [Applicability-Gated Molecular AI](https://github.com/SunilgarGusai/applicability-gated-molecular-ai)
 - [Calibration Transfer of Conformal Prediction](https://github.com/SunilgarGusai/PAPER-JCMM-reproducibility)
+
+## Public research explainers
+
+- [Vertex Eccentricity Labeled Energy — definition and worked example](research/vertex-eccentricity-labeled-energy.html)
+- [VELE power-grid screening — methodology, evidence and limitations](research/vele-power-grid-screening.html)
 
 ## Recent scholarly milestones
 

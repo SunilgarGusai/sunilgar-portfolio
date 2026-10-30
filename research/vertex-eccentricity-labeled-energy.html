@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vertex Eccentricity Labeled Energy (VELE): Definition and Example | Dr. Sunilgar L. Gusai</title>
+<meta name="description" content="A mathematical introduction to Vertex Eccentricity Labeled Energy (VELE), its matrix definition, a complete-graph example, and the original 2025 publication.">
+<meta name="author" content="Sunilgar L. Gusai">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sunilgargusai.github.io/sunilgar-portfolio/research/vertex-eccentricity-labeled-energy.html">
+<link rel="icon" type="image/webp" href="../assets/sg-orbital-logo.webp">
+<link rel="stylesheet" href="research-pages.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vertex Eccentricity Labeled Energy (VELE): Definition and Example">
+<meta property="og:description" content="A mathematical introduction to Vertex Eccentricity Labeled Energy (VELE), its matrix definition, a complete-graph example, and the original 2025 publication.">
+<meta property="og:url" content="https://sunilgargusai.github.io/sunilgar-portfolio/research/vertex-eccentricity-labeled-energy.html">
+<meta property="og:image" content="https://sunilgargusai.github.io/sunilgar-portfolio/assets/profile.jpg">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What is Vertex Eccentricity Labeled Energy (VELE)?","description":"A mathematical introduction to Vertex Eccentricity Labeled Energy (VELE), its matrix definition, a complete-graph example, and the original 2025 publication.","author":{"@type":"Person","name":"Sunilgar L. Gusai","url":"https://sunilgargusai.github.io/sunilgar-portfolio/","sameAs":["https://orcid.org/0009-0004-0739-4812","https://github.com/SunilgarGusai"]},"publisher":{"@type":"Person","name":"Sunilgar L. Gusai","url":"https://sunilgargusai.github.io/sunilgar-portfolio/"},"datePublished":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://sunilgargusai.github.io/sunilgar-portfolio/research/vertex-eccentricity-labeled-energy.html","url":"https://sunilgargusai.github.io/sunilgar-portfolio/research/vertex-eccentricity-labeled-energy.html","citation":["https://doi.org/10.14419/qtfv0860"]}</script>
+</head><body>
+<a href="#content" class="skip">Skip to content</a>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">SG · Research Portfolio</a>
+<nav aria-label="Site navigation"><a href="../#research">Research</a><a href="../#open-research">Open projects</a><a href="../#publications">Publications</a><a href="../#contact">Contact</a></nav></div></header>
+<main class="wrap" id="content"><article>
+<p class="eyebrow">Spectral graph theory · Graph energy</p>
+<h1>What is Vertex Eccentricity Labeled Energy (VELE)?</h1>
+<p class="lead">A mathematical introduction to Vertex Eccentricity Labeled Energy (VELE), its matrix definition, a complete-graph example, and the original 2025 publication.</p>
+<p class="meta">Research explainer · Sunilgar L. Gusai · 30 October 2026 · <a href="../">Academic portfolio</a></p>
+
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><div><a href="#definition">Definition</a><a href="#example">Example</a><a href="#interpretation">Interpretation</a><a href="#source">Original paper</a></div></nav>
+<section id="definition"><h2>Mathematical definition</h2>
+<p>Let <em>G = (V, E)</em> be a finite, simple, connected, undirected graph with <em>n</em> vertices. The eccentricity <em>e(v)</em> of a vertex <em>v</em> is the greatest graph distance from <em>v</em> to any other vertex of <em>G</em>.</p>
+<div class="math" role="math" aria-label="e of v equals maximum graph distance from v to u, over all vertices u">e(v) = max { d<sub>G</sub>(v,u) : u ∈ V(G) }.</div>
+<p>For vertices <em>v<sub>1</sub>, …, v<sub>n</sub></em>, the <strong>Vertex Eccentricity Labeled (VEL) matrix</strong> is a real symmetric matrix with zero diagonal and off-diagonal entries equal to the sum of the corresponding eccentricities:</p>
+<div class="math" role="math" aria-label="Entry m i j equals zero if i equals j, otherwise eccentricity of v i plus eccentricity of v j">m<sub>ij</sub> = { 0, if i = j;  e(v<sub>i</sub>) + e(v<sub>j</sub>), if i ≠ j }.</div>
+<p>If its eigenvalues are ξ<sub>1</sub>, …, ξ<sub>n</sub>, the <strong>Vertex Eccentricity Labeled Energy</strong> is defined by</p>
+<div class="math" role="math" aria-label="VELE of G equals the sum of the absolute values of the eigenvalues">VELE(G) = |ξ<sub>1</sub>| + ··· + |ξ<sub>n</sub>|.</div>
+<p>Because the VEL matrix is symmetric, its eigenvalues are real. Its trace is zero because the diagonal entries vanish.</p>
+</section>
+<section id="example"><h2>A checkable example: the complete graph</h2>
+<p>For the complete graph <em>K<sub>n</sub></em>, with <em>n ≥ 2</em>, every vertex has eccentricity 1. Consequently, its VEL matrix is <em>2(J − I)</em>, where <em>J</em> is the all-ones matrix and <em>I</em> is the identity matrix.</p>
+<p>The eigenvalues are <em>2(n − 1)</em>, once, and <em>−2</em>, with multiplicity <em>n − 1</em>. Therefore:</p>
+<div class="math" role="math" aria-label="Vertex eccentricity labeled energy of the complete graph is four times n minus one">VELE(K<sub>n</sub>) = 4(n − 1).</div>
+<p>For instance, <em>VELE(K<sub>4</sub>) = 12</em>. This example follows directly from the matrix definition; it does not require a computational approximation.</p>
+</section>
+<section id="interpretation"><h2>What does VELE capture?</h2>
+<p>VELE is a spectral invariant built from vertex eccentricities, which depend on global shortest-path distances. It is therefore different from conventional adjacency-matrix energy and should not be treated as interchangeable with it.</p>
+<p>The original paper develops algebraic properties, bounds, graph-family formulas, and results under graph operations. The invariant describes a mathematical feature of graph structure; it does <strong>not</strong> by itself establish physical reliability, electrical security, or predictive performance in an applied network.</p>
+<p>For an application that explicitly tests those limitations, see the <a href="vele-power-grid-screening.html">VELE power-grid screening research explainer</a>.</p>
+</section>
+<section id="source"><h2>Original publication and scholarly attribution</h2>
+<div class="paper"><p><strong>Gusai, S., Kaneria, V., and Jadeja, M. (2025).</strong> On Vertex Eccentricity Labeled Energy of A Graph. <em>International Journal of Basic and Applied Sciences</em>, 14(4), 339–350.</p><p><a href="https://doi.org/10.14419/qtfv0860">DOI: 10.14419/qtfv0860</a> · <a href="https://www.sciencepubco.com/index.php/IJBAS/article/view/34464">Publisher record</a></p></div>
+<p>This page is an accessible introduction to a published mathematical definition, not a substitute for the original article's complete theorems and proofs.</p>
+</section>
+<div class="cta"><a href="vele-power-grid-screening.html">See the power-grid study</a><a href="../#publications">Other publications</a></div>
+</article></main>
+<footer><div class="wrap">© 2026 Sunilgar L. Gusai · This is an explanatory research page; consult the linked publication and reproducibility records for the authoritative scientific details.</div></footer>
+</body></html>

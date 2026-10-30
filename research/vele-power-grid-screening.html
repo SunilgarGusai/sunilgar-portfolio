@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VELE Power-Grid Screening: Methods, Evidence and Limitations | Dr. Sunilgar L. Gusai</title>
+<meta name="description" content="A source-linked overview of VELE power-grid vulnerability screening across six IEEE/MATPOWER cases, including DC-flow comparisons, negative findings, and reproducibility.">
+<meta name="author" content="Sunilgar L. Gusai">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sunilgargusai.github.io/sunilgar-portfolio/research/vele-power-grid-screening.html">
+<link rel="icon" type="image/webp" href="../assets/sg-orbital-logo.webp">
+<link rel="stylesheet" href="research-pages.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VELE Power-Grid Screening: Methods, Evidence and Limitations">
+<meta property="og:description" content="A source-linked overview of VELE power-grid vulnerability screening across six IEEE/MATPOWER cases, including DC-flow comparisons, negative findings, and reproducibility.">
+<meta property="og:url" content="https://sunilgargusai.github.io/sunilgar-portfolio/research/vele-power-grid-screening.html">
+<meta property="og:image" content="https://sunilgargusai.github.io/sunilgar-portfolio/assets/profile.jpg">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Can Vertex Eccentricity Labeled Energy help screen power-grid vulnerability?","description":"A source-linked overview of VELE power-grid vulnerability screening across six IEEE/MATPOWER cases, including DC-flow comparisons, negative findings, and reproducibility.","author":{"@type":"Person","name":"Sunilgar L. Gusai","url":"https://sunilgargusai.github.io/sunilgar-portfolio/","sameAs":["https://orcid.org/0009-0004-0739-4812","https://github.com/SunilgarGusai"]},"publisher":{"@type":"Person","name":"Sunilgar L. Gusai","url":"https://sunilgargusai.github.io/sunilgar-portfolio/"},"datePublished":"2026-10-30","inLanguage":"en","mainEntityOfPage":"https://sunilgargusai.github.io/sunilgar-portfolio/research/vele-power-grid-screening.html","url":"https://sunilgargusai.github.io/sunilgar-portfolio/research/vele-power-grid-screening.html","citation":["https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility","https://doi.org/10.14419/qtfv0860"]}</script>
+</head><body>
+<a href="#content" class="skip">Skip to content</a>
+<header class="site-head"><div class="wrap"><a class="brand" href="../">SG · Research Portfolio</a>
+<nav aria-label="Site navigation"><a href="../#research">Research</a><a href="../#open-research">Open projects</a><a href="../#publications">Publications</a><a href="../#contact">Contact</a></nav></div></header>
+<main class="wrap" id="content"><article>
+<p class="eyebrow">Network resilience · Structural–electrical validation</p>
+<h1>Can Vertex Eccentricity Labeled Energy help screen power-grid vulnerability?</h1>
+<p class="lead">A source-linked overview of VELE power-grid vulnerability screening across six IEEE/MATPOWER cases, including DC-flow comparisons, negative findings, and reproducibility.</p>
+<p class="meta">Research explainer · Sunilgar L. Gusai · 30 October 2026 · <a href="../">Academic portfolio</a></p>
+
+<nav class="toc" aria-label="On this page"><strong>On this page</strong><div><a href="#question">Research question</a><a href="#method">Method</a><a href="#evidence">Evidence</a><a href="#limitations">Limitations</a><a href="#verify">Verify</a></div></nav>
+<section id="question"><h2>The research question</h2>
+<p>Power-grid topology and electrical severity are different things. A graph-based structural diagnostic can identify a topologically important element without showing that its failure necessarily causes severe physical consequences.</p>
+<p>The VELE study examines whether an eccentricity-sensitive spectral descriptor adds useful information for <strong>screening</strong> contingencies, and where it agrees or disagrees with DC power-flow redistribution, residual disconnection, and service consequences. For the mathematical definition, see <a href="vertex-eccentricity-labeled-energy.html">What is VELE?</a></p>
+</section>
+<section id="method"><h2>How is the study organized?</h2>
+<p>Each benchmark is represented twice: as a simple graph for spectral/topological screening, and as a physical network retaining electrical attributes such as reactance, branch rows, phase-related parameters and generation/demand information. The study does not identify the two representations as interchangeable.</p>
+<ul><li>Six IEEE/MATPOWER benchmark systems: 14, 30, 39, 57, 118 and 300 buses.</li>
+<li>558 stylized single-bus removal cases and 784 physical branch-outage cases.</li>
+<li>1,692 progressive electrical states.</li>
+<li>Independent intact-system DC-equation checks against MATPOWER 8.1 in GNU Octave.</li></ul>
+<p>Bus removals are stylized screening events rather than ordinary N−1 compliance assessments. Candidate-line screening is also separated from claims about downstream engineering feasibility.</p>
+</section>
+<section id="evidence"><h2>What do the published repository records show?</h2>
+<p>These figures come from the <a href="https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility/blob/main/docs/FROZEN_RESULTS.md">public frozen-results summary</a>. They describe the study's measured cases rather than guarantees for other grids.</p>
+<table><thead><tr><th scope="col">Recorded outcome</th><th scope="col">Value</th><th scope="col">Interpretation</th></tr></thead><tbody>
+<tr><td>Physical branch outages assessed</td><td>784</td><td>Frozen benchmark event set</td></tr>
+<tr><td>Residual disconnection events</td><td>114 / 784</td><td>Structural consequence</td></tr>
+<tr><td>Secondary surviving-load shedding events</td><td>47 / 784</td><td>Electrical service-consequence proxy</td></tr>
+<tr><td>IEEE118 VELE vs flow redistribution</td><td>Spearman 0.287</td><td>Modest positive association</td></tr>
+<tr><td>IEEE300 VELE vs flow redistribution</td><td>Spearman 0.255</td><td>Modest positive association</td></tr>
+<tr><td>IEEE39 residual-disconnection ROC-AUC</td><td>0.384</td><td>Unfavorable outcome</td></tr>
+</tbody></table>
+<p>The repo explicitly reports cases where a conventional degree-based comparator performs better. This is important evidence against portraying VELE as a universal power-grid vulnerability score.</p>
+</section>
+<section id="limitations"><h2>Important limitations</h2>
+<ul><li><strong>Parallel circuits:</strong> in a simple graph, losing one circuit while a parallel circuit survives can leave the structural graph unchanged. The record reports 22 branch rows in parallel pairs with zero VELE stress despite nonzero DC-flow change.</li>
+<li><strong>Physical model dependence:</strong> DC-flow and redispatch assumptions affect how electrical severity is evaluated. They are not full AC security studies.</li>
+<li><strong>Structural versus electrical endpoints:</strong> residual disconnection is a topological outcome; it is not independent evidence of real-world electrical performance.</li>
+<li><strong>Generalizability:</strong> these are six benchmark systems and specified scenarios, not a claim of universal ranking quality.</li></ul>
+<p>The appropriate interpretation is that VELE can be assessed as a <strong>complementary structural screening diagnostic</strong>, not a substitute for electrical contingency analysis.</p>
+</section>
+<section id="verify"><h2>Open evidence and reproducibility</h2>
+<div class="paper"><p><strong>Research repository:</strong> <a href="https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility">VELE Power-Grid Vulnerability Screening</a></p>
+<p><strong>Protocol:</strong> <a href="https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility/blob/main/docs/METHOD_PROTOCOL.md">Frozen method and assumptions</a></p>
+<p><strong>Computational release:</strong> <a href="https://github.com/SunilgarGusai/VELE-PowerGrid-Reproducibility/releases/tag/v1.0.0-submission">v1.0.0-submission reproducibility archive</a></p>
+<p><strong>Original VELE theory:</strong> <a href="https://doi.org/10.14419/qtfv0860">Gusai, Kaneria and Jadeja (2025)</a></p></div>
+<p>This page describes a publicly documented research evaluation, not a certification of an operational electricity network or an announcement that its companion manuscript has been published.</p>
+</section>
+<div class="cta"><a href="vertex-eccentricity-labeled-energy.html">Understand VELE theory</a><a href="../#open-research">All research projects</a></div>
+</article></main>
+<footer><div class="wrap">© 2026 Sunilgar L. Gusai · This is an explanatory research page; consult the linked publication and reproducibility records for the authoritative scientific details.</div></footer>
+</body></html>
