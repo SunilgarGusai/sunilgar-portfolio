@@ -1,0 +1,26 @@
+name: Discoverability static checks
+on:
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'sitemap.xml'
+      - 'research/**'
+      - 'scripts/check_discoverability.py'
+      - '.github/workflows/discoverability-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'sitemap.xml'
+      - 'research/**'
+      - 'scripts/check_discoverability.py'
+      - '.github/workflows/discoverability-check.yml'
+permissions:
+  contents: read
+jobs:
+  validate-static-discoverability:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check research-page metadata and sitemap
+        run: python3 scripts/check_discoverability.py
