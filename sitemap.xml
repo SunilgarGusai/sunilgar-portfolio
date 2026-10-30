@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sunilgargusai.github.io/sunilgar-portfolio/</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://sunilgargusai.github.io/sunilgar-portfolio/research/vertex-eccentricity-labeled-energy.html</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://sunilgargusai.github.io/sunilgar-portfolio/research/vele-power-grid-screening.html</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
